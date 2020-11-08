@@ -1,0 +1,22 @@
+<article>
+  <!-- <div *ngFor="let post of model.posts; let i=index;">
+
+    <app-post-card></app-post-card>
+
+  </div> -->
+</article>
+
+<div class="container">
+  <div class="row">
+
+    <div class="card-columns">
+      <div>
+
+        <app-post-card *ngFor="let post of this.pagedPosts?.posts | async" [model]="post"></app-post-card>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>

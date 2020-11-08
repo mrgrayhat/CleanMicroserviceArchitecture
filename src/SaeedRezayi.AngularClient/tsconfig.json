@@ -1,0 +1,55 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "emitDecoratorMetadata": true, // for fix upload component error
+    "strictPropertyInitialization": false, // ignore init or set var values
+    "strict": true, /* Enable all strict type-checking options. */
+    "noImplicitReturns": true,
+    "allowUnreachableCode": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "suppressExcessPropertyErrors": false,
+    "noImplicitThis": true,
+    "noFallthroughCasesInSwitch": true,
+    //"strictFunctionTypes": true,
+    "suppressImplicitAnyIndexErrors": false,
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "target": "es2015",
+    "module": "es2020",
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "baseUrl": "src",
+    "paths": {
+      "@app/*": [
+        "app/*"
+      ],
+      "@app/core/*": [
+        "app/core/*"
+      ],
+      "@app/shared/*": [
+        "app/shared/*"
+      ],
+      "@env/*": [
+        "environments/*"
+      ]
+    }
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "preserveWhiteSpace": false
+  }
+}

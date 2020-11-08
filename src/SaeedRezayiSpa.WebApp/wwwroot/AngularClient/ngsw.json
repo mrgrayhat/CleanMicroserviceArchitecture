@@ -1,0 +1,133 @@
+{
+  "configVersion": 1,
+  "timestamp": 1603296945709,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/4.705b9aceca0c4826f73f.js",
+        "/favicon.ico",
+        "/index.html",
+        "/main.f3c73f8dc82911732030.js",
+        "/manifest.webmanifest",
+        "/ngsw-worker.js",
+        "/polyfills.35a5ca1855eb057f016a.js",
+        "/runtime.2b3997c0a3dbedbf533c.js",
+        "/safety-worker.js",
+        "/styles.1fe04609aaaf32b92155.css",
+        "/worker-basic.min.js"
+      ],
+      "patterns": [
+        "https:\\/\\/fonts\\.googleapis\\.com\\/.*"
+      ]
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/blog-img-search.jpg",
+        "/assets/blog-img.jpg",
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+        "/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+        "/fontawesome-webfont.8b43027f47b20503057d.eot",
+        "/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+        "/fontawesome-webfont.f691f37e57f04c152e23.woff"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "api-settings",
+      "patterns": [
+        "\\/api\\/ApiSettings"
+      ],
+      "strategy": "performance",
+      "maxSize": 15,
+      "maxAge": 3600000,
+      "timeoutMs": 0,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    },
+    {
+      "name": "api-blog-posts",
+      "patterns": [
+        "\\/api\\/Blog"
+      ],
+      "strategy": "freshness",
+      "maxSize": 20,
+      "maxAge": 3600000,
+      "timeoutMs": 0,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "/4.705b9aceca0c4826f73f.js": "49454555270259a914fb9e1803847e361ad02047",
+    "/assets/blog-img-search.jpg": "a4bbd18179cd3656b4056a80ca1f8f0d6d1ad9aa",
+    "/assets/blog-img.jpg": "3611a7e17297e68152108bbac60821b0100cdd12",
+    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf": "13b1eab65a983c7a73bc7997c479d66943f7c6cb",
+    "/fontawesome-webfont.20fd1704ea223900efa9.woff2": "d6f48cba7d076fb6f2fd6ba993a75b9dc1ecbf0c",
+    "/fontawesome-webfont.8b43027f47b20503057d.eot": "d980c2ce873dc43af460d4d572d441304499f400",
+    "/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg": "98a8aa5cf7d62c2eff5f07ede8d844b874ef06ed",
+    "/fontawesome-webfont.f691f37e57f04c152e23.woff": "28b782240b3e76db824e12c02754a9731a167527",
+    "/index.html": "1ceb78d3c02281442078dfbe758bcfbdddcf1498",
+    "/main.f3c73f8dc82911732030.js": "7da759f3c420bdab5e69f1e251cbeda21265a3a7",
+    "/manifest.webmanifest": "ea725b641167e01f854bd766a9a15d526bfb20ec",
+    "/ngsw-worker.js": "601253069e8f1d4f717e0bd54332587669d68261",
+    "/polyfills.35a5ca1855eb057f016a.js": "578360d24ce37383f261c7ef63b1f822d28e8dde",
+    "/runtime.2b3997c0a3dbedbf533c.js": "87d694df58c525a980ae3f483baaee14112a4272",
+    "/safety-worker.js": "f532926317210be6e2679d21748dc44a35389807",
+    "/styles.1fe04609aaaf32b92155.css": "3896529194f0b63765d700a53a9846f21bd2dfde",
+    "/worker-basic.min.js": "f532926317210be6e2679d21748dc44a35389807"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}

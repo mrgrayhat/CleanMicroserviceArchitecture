@@ -1,0 +1,18 @@
+{
+    "sqltools.connections": [
+        {
+            "mssqlOptions": {
+                "appName": "SQLTools",
+                "useUTC": true,
+                "encrypt": false
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 1433,
+            "askForPassword": true,
+            "driver": "MSSQL",
+            "name": "SaeedRezayiLocalDb",
+            "connectString": "Data Source=(LocalDB)\\\\MSSQLLocalDB;Initial Catalog=SaeedRezayiDatabase;AttachDbFilename=S:\\Github\\SaeedRezayiWebSite\\src\\SaeedRezayi.Api\\wwwroot\\app_data\\\\SaeedRezayiDatabase.mdf;Integrated Security=True;MultipleActiveResultSets=True;"
+        }
+    ]
+}

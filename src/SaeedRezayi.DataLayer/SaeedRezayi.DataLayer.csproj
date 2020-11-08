@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Migrations\20201013142655_InitBlogSystem001.cs" />
+    <Compile Remove="Migrations\20201013142655_InitBlogSystem001.Designer.cs" />
+    <Compile Remove="Migrations\20201013144424_InitBlogSystem001.cs" />
+    <Compile Remove="Migrations\20201013144424_InitBlogSystem001.Designer.cs" />
+    <Compile Remove="Migrations\20201013153129_InitBlogSystem.cs" />
+    <Compile Remove="Migrations\20201013153129_InitBlogSystem.Designer.cs" />
+    <Compile Remove="Migrations\20201104221452_AddLocalCulture_AddPostLocalTable.cs" />
+    <Compile Remove="Migrations\20201104221452_AddLocalCulture_AddPostLocalTable.Designer.cs" />
+    <Compile Remove="Migrations\20201105112021_AddLocalePostTable_AddCultureTable.cs" />
+    <Compile Remove="Migrations\20201105112021_AddLocalePostTable_AddCultureTable.Designer.cs" />
+    <Compile Remove="Migrations\20201107141504_AddCultureTable_AddPostLocalesTable_UserCulture.cs" />
+    <Compile Remove="Migrations\20201107141504_AddCultureTable_AddPostLocalesTable_UserCulture.Designer.cs" />
+    <Compile Remove="Migrations\20201107163333_AddCultureTable_AddPostLocalesTable_AddUserCultureAndBioAndFriendship.cs" />
+    <Compile Remove="Migrations\20201107163333_AddCultureTable_AddPostLocalesTable_AddUserCultureAndBioAndFriendship.Designer.cs" />
+    <Compile Remove="Migrations\20201107163907_InitBlogSystem_AddCulture_PostLocales_InitUsersSystem.cs" />
+    <Compile Remove="Migrations\20201107163907_InitBlogSystem_AddCulture_PostLocales_InitUsersSystem.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SaeedRezayi.DomainClasses\SaeedRezayi.DomainClasses.csproj" />
+    <ProjectReference Include="..\SaeedRezayi.Common\SaeedRezayi.Common.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.9">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.9">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.9" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.9" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.9" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.9" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="3.1.9" />
+    <PackageReference Include="MongoDB.Driver" Version="2.11.3" />
+  </ItemGroup>
+</Project>

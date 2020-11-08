@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <NoWarn>RCS1090</NoWarn>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SaeedRezayi.LogModule\SaeedRezayi.LogModule.csproj" />
+    <ProjectReference Include="..\SaeedRezayi.ViewModels\SaeedRezayi.ViewModels.csproj" />
+    <ProjectReference Include="..\SaeedRezayi.DomainClasses\SaeedRezayi.DomainClasses.csproj" />
+    <ProjectReference Include="..\SaeedRezayi.Common\SaeedRezayi.Common.csproj" />
+    <ProjectReference Include="..\SaeedRezayi.DataLayer\SaeedRezayi.DataLayer.csproj" />
+    <ProjectReference Include="..\SaeedRezayi.ViewModels\SaeedRezayi.ViewModels.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.9" />
+  </ItemGroup>
+</Project>

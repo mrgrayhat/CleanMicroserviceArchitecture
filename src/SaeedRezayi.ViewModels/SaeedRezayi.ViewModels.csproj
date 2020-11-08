@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SaeedRezayi.Common\SaeedRezayi.Common.csproj" />
+    <ProjectReference Include="..\SaeedRezayi.DomainClasses\SaeedRezayi.DomainClasses.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Account\Token\" />
+    <Folder Include="Pagination\" />
+    <Folder Include="Search\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="cloudscribe.Web.Pagination" Version="3.1.0" />
+    <PackageReference Include="DNTCommon.Web.Core" Version="2.3.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+</Project>

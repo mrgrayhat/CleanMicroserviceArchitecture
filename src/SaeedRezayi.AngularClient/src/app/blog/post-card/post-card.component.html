@@ -1,0 +1,34 @@
+<!-- <div class="card">
+    <img class="card-img col-md-4 " src="../../../assets/blog-img-search.jpg" alt="">
+    <div class="card-body">
+      <h4 class="card-title">Title</h4>
+      <p class="card-text">Text</p>
+    </div>
+  </div> -->
+  
+<div class="card post-card">
+
+  <div class="card-header">
+    <h4 class="card-title">{{model.title}}</h4>
+	<img class="img col-md-2" src="{{model.thumbnail}}" alt="{{model.title}}"/>
+  </div>
+
+  <div class="card-body">
+    <p class="card-text">
+      {{model.content}}
+    </p>
+  </div>
+
+  <div class="card-footer">
+    Created: {{model.createdAt}} , Edited: {{model.lastUpdate}}
+	Category: {{model.category}} Tags: {{model.tags}}
+  </div>
+
+</div>
+<!-- 
+post comments:
+<div class="">
+	<div>
+	
+	<div>
+</div> -->
