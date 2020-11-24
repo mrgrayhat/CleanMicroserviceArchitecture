@@ -1,14 +1,12 @@
 ﻿using System;
-using Newtonsoft.Json;
 using SaeedRezayi.DomainClasses.Blog.Posts;
 using SaeedRezayi.DomainClasses.Common;
-using SaeedRezayi.ViewModels.Account;
 
 namespace SaeedRezayi.ViewModels.Blog
 {
     public class AttachmentViewModel : CommonEntityProperties<Guid>
     {
-        
+
         public string Name { get; set; }
         public string Password { get; set; }
         public long Size { get; set; }

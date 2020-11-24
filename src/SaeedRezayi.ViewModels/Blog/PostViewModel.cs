@@ -89,7 +89,7 @@ namespace SaeedRezayi.ViewModels.Blog
                 return null;
             }
 
-            var postInfo = new PostInfo
+            PostInfo postInfo = new PostInfo
             {
                 Id = postViewModel.Id,
                 IsArchive = postViewModel.IsArchive,
@@ -105,18 +105,20 @@ namespace SaeedRezayi.ViewModels.Blog
                 Locales = postViewModel.PostLocales?
                 .Select(x => (PostLocaleInfo)x).ToList()
             };
+            // TODO: Why this does'nt work?!
+            //postInfo.PostKeywords = postInfo.PostKeywords?
+            //    .Select(c => new PostKeyword
+            //    { KeywordId = c.KeywordId, PostId = c.PostId })
+            //    .ToList();
+
+            // TODO: Find Better way to Map n*n entities data
             foreach (var item in postViewModel.Keywords)
-            {
                 postInfo.PostKeywords.Add(new PostKeyword { Keyword = item });
-            }
             foreach (var item in postViewModel.Tags)
-            {
                 postInfo.PostTags.Add(new PostTag { Tag = item });
-            }
             foreach (var item in postViewModel.Attachments)
-            {
                 postInfo.PostAttachments.Add(new PostAttachment { Attachment = item });
-            }
+
             return postInfo;
         }
     }
