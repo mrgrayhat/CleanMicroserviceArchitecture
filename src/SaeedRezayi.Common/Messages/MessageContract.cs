@@ -20,6 +20,7 @@ namespace SaeedRezayi.Common.Messages
         ERROR = HttpStatusCode.InternalServerError,
         INVALID = HttpStatusCode.BadRequest,
         UNAUTHORIZED = HttpStatusCode.Unauthorized,
+        EXSIST = HttpStatusCode.Found,
 
     }
 }
