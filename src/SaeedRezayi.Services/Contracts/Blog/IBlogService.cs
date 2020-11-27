@@ -49,7 +49,7 @@ namespace SaeedRezayi.Services.Contracts.Blog
             int pageNumber, int recordsPerPage, string sortByField,
             SortingOrderTypes sortOrder = SortingOrderTypes.Descending, bool showAllPosts = false);
         Task<PagedPostsListViewModel> FindPagedPostsListAsync(TagViewModel tag);
-        Task<PostViewModel> FindPostAsync(int postId);
+        Task<PostViewModel> FindPostAsync(int postId, bool track = false);
         Task<PostViewModel> FindPostAsync(string title);
         Task<PostViewModel> FindPostAsync(PostViewModel post);
         #endregion

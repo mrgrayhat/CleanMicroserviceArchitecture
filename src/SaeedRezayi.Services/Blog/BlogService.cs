@@ -1,18 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using SaeedRezayi.Common;
 using SaeedRezayi.Common.Messages;
 using SaeedRezayi.DataLayer.Context;
 using SaeedRezayi.DomainClasses.Blog.Posts;
 using SaeedRezayi.Services.Contracts.Blog;
-using Microsoft.EntityFrameworkCore;
 using SaeedRezayi.ViewModels.Blog;
 using SaeedRezayi.ViewModels.Types;
-using Microsoft.Extensions.Logging;
-using System.Collections.Generic;
-using SaeedRezayi.DomainClasses.Blog.Posts.Locales;
 
 namespace SaeedRezayi.Services.Blog
 {
@@ -20,9 +19,8 @@ namespace SaeedRezayi.Services.Blog
     {
         private readonly IUnitOfWork _uow;
         private readonly DbSet<PostInfo> _posts;
-        private readonly DbSet<PostLocaleInfo> _postsLocals;
         private readonly DbSet<CategoryInfo> _categories;
-
+        private readonly DbSet<AttachmentInfo> _attachments;
         private readonly ILogger<BlogService> _logger;
 
         public BlogService(IUnitOfWork uow, ILogger<BlogService> logger)
@@ -33,8 +31,8 @@ namespace SaeedRezayi.Services.Blog
             _uow = uow;
             _uow.CheckArgumentIsNull(nameof(_uow));
 
+            _attachments = _uow.Set<AttachmentInfo>();
             _posts = _uow.Set<PostInfo>();
-            _postsLocals = _uow.Set<PostLocaleInfo>();
             _categories = _uow.Set<CategoryInfo>();
         }
 
@@ -46,31 +44,49 @@ namespace SaeedRezayi.Services.Blog
             {
                 if (await FindPostAsync(item.Title) != null)
                 {
-                    _logger.LogError($"Post already exist. Failed to add post: `{post.Id}`.");
+                    _logger.LogError($"Post already exist. Failed to add post: `{item.Title}`.");
                     return new MessageContract
                     {
-                        StatusCode = MessageStatusCodeTypes.ERROR,
+                        StatusCode = MessageStatusCodeTypes.EXSIST,
                         Message = "Post already exist!",
                         Exception = new InvalidOperationException("Post already exist")
                     };
                 }
             }
-            var cat = await _categories
-                .AsNoTracking()
-                .FirstOrDefaultAsync(c => c.Title == post.Category.Title);
-            if (cat != null)
-            {
-                post.Category = cat;
-            }
 
-            var added = await _posts.AddAsync((PostInfo)post);
+            if (post.Category != null)
+            {
+                var cat = await _categories
+                    .AsNoTracking()
+                    .FirstOrDefaultAsync(c => c.Title == post.Category.Title);
+
+                if (cat != null)
+                {
+                    post.Category = cat;
+                }
+            }
+            if (post.Attachments != null)
+            {
+                //foreach (var item in post.Attachments)
+                //{
+                //    var at = await _attachments
+                //        .AsNoTracking()
+                //        .FirstOrDefaultAsync(a => a.Id == item.Id);
+                //    if (at != null)
+                //    {
+                //        post.Attachments.Remove(item);
+                //        post.Attachments.Add(at);
+                //    }
+                //}
+            }
+            var added = _posts.Update(post);
             await _uow.SaveChangesAsync();
 
             return new MessageContract
             {
                 StatusCode = MessageStatusCodeTypes.SUCCESS,
                 Message = "Post Added Successfully!",
-                Parameter = (PostViewModel)added.Entity
+                Parameter = new WeakReference((PostViewModel)added.Entity)
             };
 
         }
@@ -97,12 +113,15 @@ namespace SaeedRezayi.Services.Blog
             return find;
         }
 
-        ///<summary>
+        /// <summary>
         /// Find a post with join relation's
-        ///</summary>
-        public async Task<PostViewModel> FindPostAsync(int postId)
+        /// </summary>
+        /// <param name="postId"></param>
+        /// <param name="track">false to search faster, true if you want to something with result</param>
+        /// <returns></returns>
+        public async Task<PostViewModel> FindPostAsync(int postId, bool track = false)
         {
-            PostViewModel model = await _posts
+            IQueryable<PostInfo> query = _posts
             .Include(c => c.Author)
             .Include(c => c.Category)
             .Include(c => c.Locales).ThenInclude(x => x.LocalCulture)
@@ -110,8 +129,11 @@ namespace SaeedRezayi.Services.Blog
             .Include(a => a.PostAttachments).ThenInclude(x => x.Attachment)
             .Include(t => t.PostTags).ThenInclude(x => x.Tag)
             .Include(c => c.PostKeywords).ThenInclude(x => x.Keyword)
-            .AsNoTracking()
-            .FirstOrDefaultAsync(x => x.Id == postId);
+            .AsQueryable();
+            if (!track)
+                query = query.AsNoTracking();
+
+            PostViewModel model = await query.FirstOrDefaultAsync(x => x.Id == postId);
             return model;
         }
         public async Task<PostViewModel> FindPostAsync(string title)
@@ -199,8 +221,21 @@ namespace SaeedRezayi.Services.Blog
         }
         public async Task<MessageContract> RemovePostAsync(int postId, bool soft)
         {
-            var result = await FindPostAsync(postId);
-            if (result == null)
+            //var find = await FindPostAsync(postId);
+            //if (find == null)
+            //{
+            //return new MessageContract
+            //{
+            //    StatusCode = MessageStatusCodeTypes.ERROR,
+            //    Message = "This Post is not exist!",
+            //};
+            //}
+
+            var post = await _posts
+                            .Include(a => a.PostAttachments)
+                            .ThenInclude(a => a.Attachment)
+                            .FirstOrDefaultAsync(x => x.Id == postId);
+            if (post == null)
             {
                 return new MessageContract
                 {
@@ -208,15 +243,30 @@ namespace SaeedRezayi.Services.Blog
                     Message = "This Post is not exist!",
                 };
             }
+            if (soft)
+            {
+                post.IsArchive = true;
+                _posts.Update(post);
+            }
+            else
+            {
+                var attachment = new AttachmentInfo();
 
-            _posts.Remove(result);
+                _attachments.RemoveRange(await _attachments
+                .Include(x => x.PostAttachments)
+                .ThenInclude(x => x.Attachment)
+                .ToListAsync());
+
+                _posts.Update(post);
+                _posts.Remove(post);
+            }
             await _uow.SaveChangesAsync();
 
             return new MessageContract
             {
                 StatusCode = MessageStatusCodeTypes.SUCCESS,
                 Message = "The post has been removed successfully!",
-            }; ;
+            };
         }
         public async Task<MessageContract> ArchivePostAsync(PostViewModel post)
         {

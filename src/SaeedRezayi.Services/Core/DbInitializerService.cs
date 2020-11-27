@@ -1,21 +1,21 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using SaeedRezayi.Common;
 using SaeedRezayi.DataLayer.Context;
 using SaeedRezayi.DomainClasses.Authentication;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using SaeedRezayi.ViewModels.Account;
-using SaeedRezayi.Services.Contracts.Account;
-using SaeedRezayi.DomainClasses.Blog.Posts;
-using SaeedRezayi.DomainClasses.Blog.JoiningTables;
 using SaeedRezayi.DomainClasses.Authentication.JoiningTables;
-using System.Threading.Tasks;
+using SaeedRezayi.DomainClasses.Blog.JoiningTables;
+using SaeedRezayi.DomainClasses.Blog.Posts;
 using SaeedRezayi.DomainClasses.Blog.Posts.Locales;
 using SaeedRezayi.DomainClasses.Common;
-using System.Collections.Generic;
-using Microsoft.Extensions.Logging;
 using SaeedRezayi.LogModule.Utilities;
+using SaeedRezayi.Services.Contracts.Account;
+using SaeedRezayi.ViewModels.Account;
 
 namespace SaeedRezayi.Services.Core
 {
@@ -254,7 +254,7 @@ namespace SaeedRezayi.Services.Core
                         await context.SaveChangesAsync();
                     }
                     int post1Id = 0;
-                    int post2Id = 0;
+                    //int post2Id = 0;
                     if (!context.Posts.Any())
                     {
                         PostInfo defaultPost = new PostInfo
@@ -267,22 +267,22 @@ namespace SaeedRezayi.Services.Core
                             .FirstOrDefaultAsync(x => x.Title == "عمومی"),
                             Visits = 10
                         };
-                        PostInfo defaultPost2 = new PostInfo
-                        {
-                            Author = await context.Users
-                            .FirstOrDefaultAsync(x => x.Username == "admin"),
-                            IsPublic = true,
-                            IsArchive = false,
-                            Category = await context.Categories
-                            .FirstOrDefaultAsync(x => x.Title == "عمومی"),
-                            Visits = 10
-                        };
+                        //PostInfo defaultPost2 = new PostInfo
+                        //{
+                        //    Author = await context.Users
+                        //    .FirstOrDefaultAsync(x => x.Username == "admin"),
+                        //    IsPublic = true,
+                        //    IsArchive = false,
+                        //    Category = await context.Categories
+                        //    .FirstOrDefaultAsync(x => x.Title == "عمومی"),
+                        //    Visits = 10
+                        //};
                         var post1 = await context.AddAsync(defaultPost);
-                        var post2 = await context.AddAsync(defaultPost2);
+                        //var post2 = await context.AddAsync(defaultPost2);
                         await context.SaveChangesAsync();
 
                         post1Id = post1.Entity.Id;
-                        post2Id = post2.Entity.Id;
+                        //post2Id = post2.Entity.Id;
 
                         PostLocaleInfo post2LocalArabic = new PostLocaleInfo
                         {
@@ -290,7 +290,7 @@ namespace SaeedRezayi.Services.Core
                             Slug = "السلام-دنیا",
                             Content = "هذا مطلب الاول ",
                             Post = await context.Posts
-                            .FirstOrDefaultAsync(x => x.Id == post2Id),
+                            .FirstOrDefaultAsync(x => x.Id == post1Id),
                             //PostId = post2Id,
                             LocalCulture = await context.Cultures
                             .FirstOrDefaultAsync(x => x.Code == "ar-sa")

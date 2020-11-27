@@ -1,17 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using SaeedRezayi.Common;
 using SaeedRezayi.DataLayer.Context;
 using SaeedRezayi.DomainClasses.Authentication;
-using Microsoft.AspNetCore.Http;
-using Microsoft.EntityFrameworkCore;
 using SaeedRezayi.Services.Contracts.Account;
-using SaeedRezayi.ViewModels.Account.Login;
-using System.Linq;
 using SaeedRezayi.ViewModels.Account;
 using SaeedRezayi.ViewModels.Account.ChangePassword;
-using System.Collections.Generic;
+using SaeedRezayi.ViewModels.Account.Login;
 using SaeedRezayi.ViewModels.Types;
 
 namespace SaeedRezayi.Services.Account
