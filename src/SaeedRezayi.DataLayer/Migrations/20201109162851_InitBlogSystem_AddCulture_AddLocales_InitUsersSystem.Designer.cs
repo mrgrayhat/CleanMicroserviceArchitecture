@@ -10,8 +10,8 @@ using SaeedRezayi.DataLayer.Context;
 namespace SaeedRezayi.DataLayer.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201107171818_InitBlogSystem_AddCulture_PostLocales_InitUsersSystem")]
-    partial class InitBlogSystem_AddCulture_PostLocales_InitUsersSystem
+    [Migration("20201109162851_InitBlogSystem_AddCulture_AddLocales_InitUsersSystem")]
+    partial class InitBlogSystem_AddCulture_AddLocales_InitUsersSystem
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -203,7 +203,7 @@ namespace SaeedRezayi.DataLayer.Migrations
 
             modelBuilder.Entity("SaeedRezayi.DomainClasses.Blog.JoiningTables.PostAttachment", b =>
                 {
-                    b.Property<int>("PostId")
+                    b.Property<int?>("PostId")
                         .HasColumnType("int");
 
                     b.Property<Guid>("AttachmentId")
@@ -569,7 +569,7 @@ namespace SaeedRezayi.DataLayer.Migrations
                     b.HasOne("SaeedRezayi.DomainClasses.Blog.Posts.AttachmentInfo", "Attachment")
                         .WithMany("PostAttachments")
                         .HasForeignKey("AttachmentId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("SaeedRezayi.DomainClasses.Blog.Posts.PostInfo", "Post")

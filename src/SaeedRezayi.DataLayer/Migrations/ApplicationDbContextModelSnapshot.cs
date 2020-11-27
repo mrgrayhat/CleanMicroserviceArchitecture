@@ -201,7 +201,7 @@ namespace SaeedRezayi.DataLayer.Migrations
 
             modelBuilder.Entity("SaeedRezayi.DomainClasses.Blog.JoiningTables.PostAttachment", b =>
                 {
-                    b.Property<int>("PostId")
+                    b.Property<int?>("PostId")
                         .HasColumnType("int");
 
                     b.Property<Guid>("AttachmentId")
@@ -567,7 +567,7 @@ namespace SaeedRezayi.DataLayer.Migrations
                     b.HasOne("SaeedRezayi.DomainClasses.Blog.Posts.AttachmentInfo", "Attachment")
                         .WithMany("PostAttachments")
                         .HasForeignKey("AttachmentId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("SaeedRezayi.DomainClasses.Blog.Posts.PostInfo", "Post")

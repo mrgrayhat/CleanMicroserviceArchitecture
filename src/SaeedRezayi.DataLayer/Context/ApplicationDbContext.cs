@@ -106,7 +106,7 @@ namespace SaeedRezayi.DataLayer.Context
                 .HasOne(x => x.Attachment)
                 .WithMany(x => x.PostAttachments)
                 .HasForeignKey(x => x.AttachmentId)
-                .OnDelete(DeleteBehavior.NoAction);
+                .OnDelete(DeleteBehavior.Cascade);
             #endregion
 
             #region PostKeyWord Join Table Configuration

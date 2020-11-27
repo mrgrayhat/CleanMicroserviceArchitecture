@@ -8,8 +8,10 @@ namespace SaeedRezayi.DataLayer.Configurations
     {
         public void Configure(EntityTypeBuilder<TagInfo> builder)
         {
+            builder.HasKey(k => k.Id);
             builder.HasIndex(x=>x.Id).IsUnique();
             builder.HasIndex(x=>x.Title).IsUnique();
+
             builder.Property(name => name.Id).ValueGeneratedOnAdd();
             builder.Property(name => name.Title).HasMaxLength(10).IsRequired();
         }

@@ -8,6 +8,7 @@ namespace SaeedRezayi.DataLayer.Configurations
     {
         public void Configure(EntityTypeBuilder<UserInfo> builder)
         {
+            builder.HasKey(k => k.Id);
             builder.HasIndex(x=>x.Id).IsUnique();
             builder.HasIndex(x=>x.Username).IsUnique();
             builder.HasIndex(x=>x.EmailAddress).IsUnique();

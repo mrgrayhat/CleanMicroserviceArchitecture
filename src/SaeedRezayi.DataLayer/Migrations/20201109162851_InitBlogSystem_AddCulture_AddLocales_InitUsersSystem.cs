@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SaeedRezayi.DataLayer.Migrations
 {
-    public partial class InitBlogSystem_AddCulture_PostLocales_InitUsersSystem : Migration
+    public partial class InitBlogSystem_AddCulture_AddLocales_InitUsersSystem : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -267,7 +267,8 @@ namespace SaeedRezayi.DataLayer.Migrations
                         name: "FK_PostAttachments_Attachments_AttachmentId",
                         column: x => x.AttachmentId,
                         principalTable: "Attachments",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_PostAttachments_Posts_PostId",
                         column: x => x.PostId,
