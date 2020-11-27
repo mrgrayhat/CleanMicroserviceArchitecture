@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using SaeedRezayi.DomainClasses.Authentication;
 using SaeedRezayi.DomainClasses.Blog.JoiningTables;
 using SaeedRezayi.DomainClasses.Blog.Posts.Locales;
@@ -39,8 +40,8 @@ namespace SaeedRezayi.DomainClasses.Blog.Posts
         public UserInfo Author { get; set; }
 
         //public int LocalId { get; set; }
-
         public int? CategoryId { get; set; }
+        [ForeignKey("CategoryId")]
         public CategoryInfo Category { get; set; }
         /// <summary>
         /// post locale data for each language

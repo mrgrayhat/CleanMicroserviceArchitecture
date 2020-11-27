@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace SaeedRezayi.DomainClasses.Common
 {
@@ -7,6 +8,7 @@ namespace SaeedRezayi.DomainClasses.Common
         /// <summary>
         /// pk
         /// </summary>
+        [Key]
         public virtual T Id { get; set; }
         /// <summary>
         /// create datetime

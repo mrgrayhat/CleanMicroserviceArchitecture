@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using SaeedRezayi.DomainClasses.Common;
 
 namespace SaeedRezayi.DomainClasses.Blog.Posts
@@ -18,6 +19,7 @@ namespace SaeedRezayi.DomainClasses.Blog.Posts
         public string Description { get; set; }
 
         public int? ParentId { get; set; }
+        [ForeignKey("ParentId")]
         public virtual CategoryInfo Parent { get; set; }
         /// <summary>
         /// Childs
