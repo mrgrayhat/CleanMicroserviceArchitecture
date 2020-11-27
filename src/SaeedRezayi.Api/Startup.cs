@@ -1,14 +1,14 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System;
+using System.Diagnostics;
+using System.Runtime;
+using DNTCommon.Web.Core;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SaeedRezayi.IoCConfig;
-using System;
-using DNTCommon.Web.Core;
-using System.Diagnostics;
 using SaeedRezayi.IoCConfig.Middlewares;
-using System.Runtime;
 
 namespace SaeedRezayi.Api
 {

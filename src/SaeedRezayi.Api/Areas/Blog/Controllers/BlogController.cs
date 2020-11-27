@@ -1,17 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
-using SaeedRezayi.Common;
-using SaeedRezayi.Services.Contracts.Blog;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using SaeedRezayi.ViewModels.Blog;
-using SaeedRezayi.ViewModels.Types;
-using Microsoft.AspNetCore.Http;
+using SaeedRezayi.Common;
 using SaeedRezayi.Common.Messages;
 using SaeedRezayi.Services.Contracts.Account;
-using System.Linq;
-using System.Collections.Generic;
+using SaeedRezayi.Services.Contracts.Blog;
+using SaeedRezayi.ViewModels.Blog;
+using SaeedRezayi.ViewModels.Types;
 
 namespace SaeedRezayi.Api.Areas.Blog.Controllers
 {
@@ -24,7 +24,7 @@ namespace SaeedRezayi.Api.Areas.Blog.Controllers
     {
         private readonly ILogger<BlogController> _logger;
         private readonly IUsersService _usersService;
-        private IBlogService _blogService;
+        private readonly IBlogService _blogService;
 
         public BlogController(ILogger<BlogController> logger, IUsersService usersService, IBlogService blogService)
         {
@@ -101,6 +101,7 @@ namespace SaeedRezayi.Api.Areas.Blog.Controllers
         public async Task<ActionResult<PostViewModel>> AddJunkPost()
         {
             int rndNumber = new Random().Next(100, 10000);
+            var author = await _usersService.FindUserAsync(3);
             var post = new PostViewModel
             {
                 PostLocales = new List<PostLocaleViewModel>(3)
@@ -157,23 +158,25 @@ namespace SaeedRezayi.Api.Areas.Blog.Controllers
                 //    new AttachmentViewModel
                 //    {
                 //        Id = Guid.NewGuid(),
-                //        Name = $"attachment1 {rndNumber}"
+                //        Name = $"attachment1 {rndNumber}",
+                //        UserId = author.Id
                 //    },
                 //    new AttachmentViewModel
                 //    {
                 //        Id = Guid.NewGuid(),
-                //        Name = $"attachment2 {rndNumber}"
+                //        Name = $"attachment2 {rndNumber}",
+                //        UserId = author.Id
                 //    }
                 //},
-                //Category = new CategoryViewModel
-                //{
-                //    //Title = $"caetgory {rndNumber}"
-                //    Title = "عمومی"
-                //},
+                Category = new CategoryViewModel
+                {
+                    Title = $"caetgory 5134"
+                    //Title = "عمومی"
+                },
                 IsArchive = false,
                 IsPublic = true,
                 Visits = 1,
-                Author = await _usersService.FindUserAsync(3),
+                Author = author
             };
             MessageContract result = await _blogService.AddPostAsync(post);
 
@@ -245,8 +248,9 @@ namespace SaeedRezayi.Api.Areas.Blog.Controllers
         /// <returns>Success(200) Or BadRequest(400)</returns>
         //[Authorize(Policy = CustomRolesViewModel.Admin)]
         //[Authorize(Policy = CustomRolesViewModel.Writer)]
+        [IgnoreAntiforgeryToken] //TODO: Fix for Validate AntiForgery!
         [HttpDelete("post/{id}")]
-        public async Task<IActionResult> DeletePost(int id)
+        public async Task<ActionResult<MessageContract>> DeletePost(int id)
         {
             id.CheckArgumentIsNull(nameof(id));
 

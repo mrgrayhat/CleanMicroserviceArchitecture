@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
-using SaeedRezayi.LogModule.Configuration;
 using Serilog;
-using Serilog.Sinks.MongoDB;
 
 namespace SaeedRezayi.Api
 {
