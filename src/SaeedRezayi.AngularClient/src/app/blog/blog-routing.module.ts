@@ -1,18 +1,18 @@
-import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
-import { AuthGuard, AuthGuardPermission } from "@app/core";
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard, AuthGuardPermission } from '@app/core';
 
-import { PostCardComponent } from "./post-card/post-card.component";
+import { PostCardComponent } from './post-card/post-card.component';
 import { PostsListComponent} from './posts-list/posts-list.component';
 
 const routes: Routes = [
-  { path: "blog", component: PostsListComponent},
-  { path: "post", component: PostCardComponent },
+  { path: 'blog', component: PostsListComponent},
+  { path: 'post', component: PostCardComponent },
   {
-    path: "edit", component: PostCardComponent,
+    path: 'edit', component: PostCardComponent,
     data: {
       permission: {
-        permittedRoles: ["Admin", "Writer"]
+        permittedRoles: ['Admin', 'Writer']
       } as AuthGuardPermission
     },
     canActivate: [AuthGuard]

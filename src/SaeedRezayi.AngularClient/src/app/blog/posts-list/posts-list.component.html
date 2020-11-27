@@ -1,11 +1,4 @@
-<article>
-  <!-- <div *ngFor="let post of model.posts; let i=index;">
-
-    <app-post-card></app-post-card>
-
-  </div> -->
-</article>
-
+<!-- 
 <div class="container">
   <div class="row">
 
@@ -19,4 +12,15 @@
 
   </div>
 
+</div> -->
+
+<div class="main-panel">
+  <div class="content-wrapper">
+    <div class="card-columns">
+
+      <!-- <app-post-card *ngFor="let post of this.pagedPosts?.posts | async" [model]="post"></app-post-card> -->
+        <app-post-card *ngFor="let number of [0,1,2,3,4,5]"></app-post-card>
+
+    </div>
+  </div>
 </div>

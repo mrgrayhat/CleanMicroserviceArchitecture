@@ -18,8 +18,8 @@ export class LogModuleService {
 
   // logsResponse: IPagedResponse<ILogViewModel> | undefined;
 
-  getPagedLogsList(): Observable<IPagedLogsListViewModel> {
-    const url = `${this.appConfig.apiEndpoint}/Logs`;
+  getPagedLogsList(page: number, maxRecords: number, logLevel: number): Observable<IPagedLogsListViewModel> {
+    const url = `${this.appConfig.apiEndpoint}/Logs/GetPagedLogs?page=${page}&maxRecords=${maxRecords}&LogLevel=${logLevel}`;
     const http = this.injector.get<HttpClient>(HttpClient);
     return http.get<IPagedLogsListViewModel>(url)
       .pipe(tap(c => {

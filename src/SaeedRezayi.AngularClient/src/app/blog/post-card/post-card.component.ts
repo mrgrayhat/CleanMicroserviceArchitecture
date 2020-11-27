@@ -11,7 +11,7 @@ import { Subject } from 'rxjs';
 export class PostCardComponent implements OnInit, OnDestroy {
   @Input()
   model: PostViewModel;
-  error = "";
+  error = '';
   destroy$: Subject<boolean> = new Subject<boolean>();
 
   constructor(
@@ -21,20 +21,22 @@ export class PostCardComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.Seed();
   }
+  // tslint:disable-next-line: typedef
   Seed() {
-    this.model.title = "test title";
-    this.model.content = "test content";
-    this.model.slug = "test-post"
-    this.model.author = "saeed"
+    this.model.title = 'test title';
+    this.model.content = 'test content';
+    this.model.slug = 'test-post';
+    this.model.author = 'saeed';
     this.model.createdAt = new Date();
     this.model.visits = 100;
   }
 
+  // tslint:disable-next-line: typedef
   ngOnDestroy() {
     this.destroy$.next(true);
     // unsubscribe
     this.destroy$.unsubscribe();
-    console.log(" post card destroyed");
+    console.log(' post card destroyed');
   }
 
 }

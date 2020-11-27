@@ -16,7 +16,7 @@ export class PostsListComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    console.log("waiting to recieve data");
+    console.log('waiting to recieve data');
     // console.log("logs items recieved: ", this.pagedLogs)
     // console.log("paging setting recieved: ", this.pagedLogs.Paging)
   }
@@ -25,7 +25,7 @@ export class PostsListComponent implements OnInit, OnDestroy {
     this.destroy$.next(true);
     // unsubscribe
     this.destroy$.unsubscribe();
-    console.log(" post list component destroyed");
+    console.log(' post list component destroyed');
   }
 
   getPosts() {

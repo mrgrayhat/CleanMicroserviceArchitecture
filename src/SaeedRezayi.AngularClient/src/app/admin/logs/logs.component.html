@@ -2,15 +2,46 @@
   <div class="row">
     <div class="btn-group" data-toggle="buttons">
       <label class="btn btn-info active">
-        <input type="checkbox" name="" id="" checked autocomplete="off">
+        <input type="checkbox" name="" id="" (click)="this.logLevel=1" checked autocomplete="off">
       </label>
       <label class="btn btn-warning">
-        <input type="checkbox" name="" id="" autocomplete="off">
+        <input type="checkbox" name="" id="" (click)="this.logLevel=2" autocomplete="off">
       </label>
       <label class="btn btn-danger">
-        <input type="checkbox" name="" id="" autocomplete="off">
+        <input type="checkbox" name="" (click)="this.logLevel=2" id="" autocomplete="off">
       </label>
     </div>
+
+    <nav aria-label="Page navigation">
+      <ul class="pagination justify-content-center">
+        <li class="page-item">
+          <a class="page-link" (click)="getLogs(1)" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li>
+        <li class="page-item"><a class="page-link"
+            (click)="getLogs(this.pagedLogs.Paging.CurrentPage-1)">{{this.pagedLogs.Paging.CurrentPage-1}}</a></li>
+        <li class="page-item active"><a class="page-link">{{this.pagedLogs.Paging.CurrentPage}}</a></li>
+        <li class="page-item">
+          <a class="page-link" (click)="getLogs(this.pagedLogs.Paging.CurrentPage+1)">
+            {{this.pagedLogs.Paging.CurrentPage+1}}
+          </a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" (click)="getLogs(this.pagedLogs.Paging.CurrentPage+10)">
+            {{this.pagedLogs.Paging.CurrentPage+10}}
+          </a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" (click)="getLogs(this.pagedLogs.Paging.TotalItems/10)" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">{{this.pagedLogs.Paging.TotalItems/10}}</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    Total: <span class="badge badge-info">{{this.pagedLogs.Paging.TotalItems}}</span>
   </div> <!-- end of row -->
 
   <div class="row">
@@ -35,25 +66,6 @@
         </tr>
       </tbody>
     </table>
-
-  </div> <!-- end of row -->
-
-  <div class="row">
-
-    <ul class="list-group">
-      <li class="list-group-item d-flex justify-content-between align-items-center active">
-        Current Page: {{this.pagedLogs?.Paging.CurrentPage}}
-        <span class="badge badge-secondary badge-pill">pill1</span>
-      </li>
-      <li class="list-group-item d-flex justify-content-between align-items-center">
-        Total items: {{this.pagedLogs?.Paging.TotalItems}}
-        <span class="badge badge-secondary badge-pill">pill2</span>
-      </li>
-      <li class="list-group-item d-flex justify-content-between align-items-center disabled">
-        Max records: {{this.pagedLogs?.Paging.MaxPagerItems}}
-        <span class="badge badge-secondary badge-pill">pill3</span>
-      </li>
-    </ul>
 
   </div> <!-- end of row -->
 

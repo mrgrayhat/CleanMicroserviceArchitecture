@@ -14,6 +14,7 @@ export class LogsComponent implements OnInit, OnDestroy {
 
   destroy$: Subject<boolean> = new Subject<boolean>();
   pagedLogs: IPagedLogsListViewModel;
+  logLevel: number = 1;
 
   ngOnInit(): void {
     this.getLogs();
@@ -24,11 +25,11 @@ export class LogsComponent implements OnInit, OnDestroy {
     this.destroy$.next(true);
     // unsubscribe
     this.destroy$.unsubscribe();
-    console.log("logs component destroyed");
+    console.log('logs component destroyed');
   }
 
-  getLogs() {
-    this.logService.getPagedLogsList()
+  getLogs(page: number = 1, maxRecords: number = 10, loglevel: number = this.logLevel) {
+    this.logService.getPagedLogsList(Math.round(page), maxRecords, loglevel)
       .toPromise().then(item => {
         this.pagedLogs = item;
       });
