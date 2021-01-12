@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Authors>SaeedRezayi</Authors>
+    <Company></Company>
+    <RepositoryUrl>https://github.com/iammukeshm/CleanArchitecture.WebApi</RepositoryUrl>
+    <RepositoryType>Public</RepositoryType>
+    <PackageProjectUrl>https://www.codewithmukesh.com/project/aspnet-core-webapi-clean-architecture/</PackageProjectUrl>
+    <Version>1.1.0</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>SaeedrezayiWebsite.Api.WebApi.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="5.6.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.6.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="4.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.10" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\Projects\BlogModule\BlogModule.Application\BlogModule.Application.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\Projects\BlogModule\BlogModule.Infrastructure.Shared\BlogModule.Infrastructure.Shared.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\Projects\BlogModule\BlogModule.Infrastructure\BlogModule.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\Projects\BlogModule\BlogModule.Web.Api\BlogModule.Web.Api.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\Projects\LoggingModule\src\LogModule.Application\LogModule.Application.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\Projects\LoggingModule\src\LogModule.Infrastructure\LogModule.Infrastructure.csproj" />
+    <ProjectReference Include="..\SaeedrezayiWebsite.Api.Application\SaeedrezayiWebsite.Api.Application.csproj" />
+    <ProjectReference Include="..\SaeedrezayiWebsite.Api.Infrastructure.Identity\SaeedrezayiWebsite.Api.Infrastructure.Identity.csproj" />
+    <ProjectReference Include="..\SaeedrezayiWebsite.Api.Infrastructure.Persistence\SaeedrezayiWebsite.Api.Infrastructure.Persistence.csproj" />
+    <ProjectReference Include="..\SaeedrezayiWebsite.Api.Infrastructure.Shared\SaeedrezayiWebsite.Api.Infrastructure.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\app_data\" />
+  </ItemGroup>
+
+</Project>

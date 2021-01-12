@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SaeedrezayiWebsite.Api.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:SaeedrezayiWebsite.Api.WebApi.Extensions.AppExtensions">
+            <summary>
+            The Web Application Extentions
+            </summary>
+        </member>
+    </members>
+</doc>
