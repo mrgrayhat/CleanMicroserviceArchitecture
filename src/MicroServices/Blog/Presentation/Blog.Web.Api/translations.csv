@@ -1,0 +1,28 @@
+ContentKey,en-US,en-GB,fr-FR,fa-IR
+app_title,Gateway.Web.Api,Gateway.Web.Api,fr-Gateway.Web.Api,Asp.Core  ò ’›ÕÂ «?
+app_description,Single page application using ASP.NET Core and Angular,Single page application using ASP.NET Core and Angular,fr-Single page application using ASP.NET Core and Angular,Ê» ”«?   ò ’›ÕÂ «? »« ¬‰êÊ·«— Ê Asp.net core
+app_repo_url,https://github.com/asadsahi/Gateway.Web.Api,https://github.com/asadsahi/Gateway.Web.Api,https://github.com/asadsahi/Gateway.Web.Api,https://github.com/asadsahi/Gateway.Web.Api
+app_nav_home,Home,Home,fr-Home,Œ«‰Â
+app_nav_examples,Examples,Examples,fr-Examples,„À«· Â«
+app_nav_register,Register,Register,fr-Register,À»  ‰«„
+app_nav_login,Login,Login,fr-Login,‰«Õ?Â ò«—»—?
+app_nav_logout,Logout,Logout,fr-Logout,Œ—ÊÃ
+app_login_btn,Login,Login,fr-Login,Ê—Êœ
+app_registry_btn,Register,Register,fr-Register,‰«„ ‰Ê?”?
+app_email,Email,Email,fr-Email,«?„?·
+app_password,Password,Password,fr-Password,ò·„Â ⁄»Ê—
+app_username,Username,Username,fr-Username,‰«„ ò«—»—?
+app_firstname,Firstname,Firstname,fr-Firstname,‰«„
+app_lastname,Lastname,Lastname,fr-Lastname,‰«„ Œ«‰Ê«œê?
+app_mobile,Mobile,Mobile,fr-Mobile, ·›‰ Â„—«Â
+app_forget_password,Forget password? click here,Forget password? click here,fr-Forget password? click here,ò·„Â ⁄»Ê— ŒÊœ —« ›—«„Ê‘ ò—œÂ «?œø «?‰Ã« ò·?ò ò‰?œ
+app_copyright,"Every Thing Is Free, Share You Knowledgh.","Every Thing Is Free, Share You Knowledgh.","fr-Every Thing Is Free, Share You Knowledgh.","Â„Â ç?“ ¬“«œ «” ° œ«‰‘ ŒÊœ —« »Â «‘—«ò »ê–«—?œ"
+app_nav_categories,Categories,Categories,fr-Categories,œ” Â »‰œ? Â«
+app_nav_blog,Blog,Blog,fr-Blog,Ê»·«ê
+app_nav_posts,Posts,Posts,fr-Posts,„ÿ«·»
+app_nav_tags,Tags,Tags,fr-Tags, ê Â«
+app_nav_projects,Projects,Projects,fr-Projects,Å—ÊéÂ Â«
+app_comments,Comments,Comments,fr-Comments,‰Ÿ—« 
+app_users,Users,Users,fr-Users,ò«—»—«‰
+app_aboutus,About Us,About Us,fr-About Us,œ—»«—Â „«
+app_culture_language,Language,Language,fr-Language,“»«‰
