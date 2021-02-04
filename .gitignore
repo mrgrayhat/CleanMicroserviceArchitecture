@@ -243,9 +243,9 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
-/src/ASPNETCore2JwtAuthentication.AngularClient/package-lock.json
-/src/ASPNETCore2JwtAuthentication.WebApp/wwwroot/AngularClient
-/src/ASPNETCore2JwtAuthentication.WebApp/package-lock.json
+/src/SaeedRezayi.AngularClient/package-lock.json
+/src/SaeedRezayi.WebApp/wwwroot/AngularClient
+/src/SaeedRezayi.WebApp/package-lock.json
 .vscode/solution-explorer/class.cs-template
 .vscode/solution-explorer/class.ts-template
 .vscode/solution-explorer/class.vb-template
@@ -255,3 +255,4 @@ ModelManifest.xml
 .vscode/solution-explorer/interface.ts-template
 .vscode/solution-explorer/template-list.json
 .vscode/solution-explorer/template-parameters.js
+/src/Gateway/Presentation/Web/ClientApp/dist/Gateway.Web.Api
