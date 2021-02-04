@@ -1,0 +1,28 @@
+﻿ContentKey,en-US,en-GB,fr-FR,fa-IR
+app_title,Gateway.Web.Api,Gateway.Web.Api,fr-Gateway.Web.Api,Asp.Net Core تک صفحه ای
+app_description,Single page application using ASP.NET Core and Angular,Single page application using ASP.NET Core and Angular,fr-Single page application using ASP.NET Core and Angular,وب سایت تک صفحه ای با آنگولار و Asp.net core
+app_repo_url,https://github.com/asadsahi/Gateway.Web.Api,https://github.com/asadsahi/Gateway.Web.Api,https://github.com/asadsahi/Gateway.Web.Api,https://github.com/asadsahi/Gateway.Web.Api
+app_nav_home,Home,Home,fr-Home,خانه
+app_nav_examples,Examples,Examples,fr-Examples,مثال ها
+app_nav_register,Register,Register,fr-Register,ثبت نام
+app_nav_login,Login,Login,fr-Login,ناحیه کاربری
+app_nav_logout,Logout,Logout,fr-Logout,خروج
+app_login_btn,Login,Login,fr-Login,ورود
+app_registry_btn,Register,Register,fr-Register,نام نویسی
+app_email,Email,Email,fr-Email,ایمیل
+app_password,Password,Password,fr-Password,کلمه عبور
+app_username,Username,Username,fr-Username,نام کاربری
+app_firstname,Firstname,Firstname,fr-Firstname,نام
+app_lastname,Lastname,Lastname,fr-Lastname,نام خانواددگی
+app_mobile,Mobile,Mobile,fr-Mobile,تلفن همراه
+app_forget_password,Forget password? click here,Forget password? click here,fr-Forget password? click here,کلمه عبور خود را فراموش کرده اید؟ اینجا کلیک کنید
+app_copyright,"Every Thing Is Free, Share You Knowledgh.","Every Thing Is Free, Share You Knowledgh.","fr-Every Thing Is Free, Share You Knowledgh.","همه چیز آزاد است، دانش خود را به اشراک بگذارید"
+app_nav_categories,Categories,Categories,fr-Categories,دسته بندیها
+app_nav_blog,Blog,Blog,fr-Blog,وبلاگ
+app_nav_posts,Posts,Posts,fr-Posts,مطالب
+app_nav_tags,Tags,Tags,fr-Tags,تگ ها
+app_nav_projects,Projects,Projects,fr-Projects,پروژه ها
+app_comments,Comments,Comments,fr-Comments,نظرات
+app_users,Users,Users,fr-Users,کاربران
+app_aboutus,About Us,About Us,fr-About Us,درباره ما
+app_culture_language,Language,Language,fr-Language,زبان

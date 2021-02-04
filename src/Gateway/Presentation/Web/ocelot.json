@@ -1,0 +1,119 @@
+{
+  "Routes": [
+    // get blog posts with paging parameters
+    {
+      "DownstreamPathTemplate": "/api/v1/Blog?PageNumber={PageNumber}&PageSize={PageSize}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/Blog?PageNumber={PageNumber}&PageSize={PageSize}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    // get blog post
+    {
+      "DownstreamPathTemplate": "/api/v1/blog/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/blog/{id}",
+      "UpstreamHttpMethod": [ "GET", "OPTIONS" ]
+    },
+    // edit blog post
+    {
+      "DownstreamPathTemplate": "/api/v1/blog/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/blog/{id}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE" ]
+    },
+    // get all blog posts
+    {
+      "DownstreamPathTemplate": "/api/v1/blog",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5004
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "UpstreamPathTemplate": "/gateway/blog",
+      "UpstreamHttpMethod": [ "GET", "OPTIONS" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      }
+    },
+    // Identity Server
+    {
+      "DownstreamPathTemplate": "/",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5007
+        }
+      ],
+      "UpstreamPathTemplate": "/Identity",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
+    },
+    // Identity Server
+    {
+      "DownstreamPathTemplate": "/",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5007
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/auth",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
+      //,"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "IdentityApiKey",
+      //  "AllowedScopes": []
+      //}
+    }
+  ],
+  "GlobalConfiguration": {
+    "RateLimitOptions": {
+      "ClientIdHeader": "ClientId",
+      "QuotaExceededMessage": "You are Reached Max Request, Try Again after 1 minutes later.",
+      "RateLimitCounterPrefix": "ocelot",
+      "DisableRateLimitHeaders": false,
+      "HttpStatusCode": 429
+    },
+    "QoSOptions": {
+      "ExceptionsAllowedBeforeBreaking": 3,
+      "DurationOfBreak": 3000,
+      "TimeoutValue": 5000
+    },
+    "LoadBalancerOptions": {
+      "Type": "LeastConnection",
+      "Key": null,
+      "Expiry": 0,
+      "BaseUrl": "https://localhost:5005",
+      "RequestIdKey": "OcRequestId",
+      "AdministrationPath": "/administration"
+    }
+  }
+}

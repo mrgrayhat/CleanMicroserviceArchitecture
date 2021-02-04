@@ -1,0 +1,8 @@
+﻿:root {
+    --primaryColor: #68217a;
+    --secondaryColor: #f4f4f4;
+    --bgMenuActive: #8e47a0;
+    --bgButton: #68217a;
+    /*--logoImageUrl: url('./NET_Foundation_Logo.png');*/
+    --bgAside: var(--primaryColor);
+}
