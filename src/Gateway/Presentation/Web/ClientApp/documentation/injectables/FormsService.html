@@ -1,0 +1,1774 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>aspnetnetcore documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">aspnetnetcore documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>FormsService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/shared/components/forms/forms.service.ts</code>
+        </p>
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#DOMAIN_REGEX">DOMAIN_REGEX</a>
+                            </li>
+                            <li>
+                                <a href="#domainValidator">domainValidator</a>
+                            </li>
+                            <li>
+                                <a href="#EMAIL_REGEX">EMAIL_REGEX</a>
+                            </li>
+                            <li>
+                                <a href="#emailValidator">emailValidator</a>
+                            </li>
+                            <li>
+                                <a href="#MONEY_REGEX">MONEY_REGEX</a>
+                            </li>
+                            <li>
+                                <a href="#moneyValidator">moneyValidator</a>
+                            </li>
+                            <li>
+                                <a href="#POSTCODE_REGEX">POSTCODE_REGEX</a>
+                            </li>
+                            <li>
+                                <a href="#postcodeValidator">postcodeValidator</a>
+                            </li>
+                            <li>
+                                <a href="#telehponeValidator">telehponeValidator</a>
+                            </li>
+                            <li>
+                                <a href="#TELEPHONE_REGEX">TELEPHONE_REGEX</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#dateValidator">dateValidator</a>
+                            </li>
+                            <li>
+                                <a href="#invalid">invalid</a>
+                            </li>
+                            <li>
+                                <a href="#multipleCheckboxRequireAtLeastOne">multipleCheckboxRequireAtLeastOne</a>
+                            </li>
+                            <li>
+                                <a href="#multipleCheckboxRequireMoreThanOne">multipleCheckboxRequireMoreThanOne</a>
+                            </li>
+                            <li>
+                                <a href="#numberNotZeroValidator">numberNotZeroValidator</a>
+                            </li>
+                            <li>
+                                <a href="#numberValidator">numberValidator</a>
+                            </li>
+                            <li>
+                                <a href="#requiredFileType">requiredFileType</a>
+                            </li>
+                            <li>
+                                <a href="#showIndicator">showIndicator</a>
+                            </li>
+                            <li>
+                                <a href="#stringToIsoUtcString">stringToIsoUtcString</a>
+                            </li>
+                            <li>
+                                <a href="#toFormData">toFormData</a>
+                            </li>
+                            <li>
+                                <a href="#trueOrFalseValidator">trueOrFalseValidator</a>
+                            </li>
+                            <li>
+                                <a href="#uploadProgress">uploadProgress</a>
+                            </li>
+                            <li>
+                                <a href="#valid">valid</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validationExist">validationExist</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/shared/components/forms/forms.service.ts:14</a></div>
+                            </td>
+                        </tr>
+
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dateValidator"></a>
+                    <span class="name">
+                        <b>
+                            dateValidator
+                        </b>
+                        <a href="#dateValidator"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>dateValidator(control: <a href="https://angular.io/api/forms/AbstractControl" target="_blank">AbstractControl</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="28"
+                            class="link-to-prism">src/app/shared/components/forms/forms.service.ts:28</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>control</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/forms/AbstractControl" target="_blank" >AbstractControl</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{ date: boolean; }</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="invalid"></a>
+                    <span class="name">
+                        <b>
+                            invalid
+                        </b>
+                        <a href="#invalid"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>invalid(form: <a href="https://angular.io/api/forms/FormGroup" target="_blank">FormGroup</a>, fieldConfig: <a href="../interfaces/IFieldConfig.html">IFieldConfig</a>, formRef: <a href="https://angular.io/api/forms/NgForm" target="_blank">NgForm</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="24"
+                            class="link-to-prism">src/app/shared/components/forms/forms.service.ts:24</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>form</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>fieldConfig</td>
+                                    <td>
+                                                <code><a href="../interfaces/IFieldConfig.html" target="_self" >IFieldConfig</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>formRef</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/forms/NgForm" target="_blank" >NgForm</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="multipleCheckboxRequireAtLeastOne"></a>
+                    <span class="name">
+                        <b>
+                            multipleCheckboxRequireAtLeastOne
+                        </b>
+                        <a href="#multipleCheckboxRequireAtLeastOne"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>multipleCheckboxRequireAtLeastOne(fa: <a href="https://angular.io/api/forms/FormArray" target="_blank">FormArray</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="43"
+                            class="link-to-prism">src/app/shared/components/forms/forms.service.ts:43</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fa</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/forms/FormArray" target="_blank" >FormArray</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{ multipleCheckboxRequireAtLeastOne: boolean; }</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="multipleCheckboxRequireMoreThanOne"></a>
+                    <span class="name">
+                        <b>
+                            multipleCheckboxRequireMoreThanOne
+                        </b>
+                        <a href="#multipleCheckboxRequireMoreThanOne"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>multipleCheckboxRequireMoreThanOne(fa: <a href="https://angular.io/api/forms/FormArray" target="_blank">FormArray</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/app/shared/components/forms/forms.service.ts:58</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fa</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/forms/FormArray" target="_blank" >FormArray</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{ multipleCheckboxRequireMoreThanOne: boolean; }</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="numberNotZeroValidator"></a>
+                    <span class="name">
+                        <b>
+                            numberNotZeroValidator
+                        </b>
+                        <a href="#numberNotZeroValidator"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>numberNotZeroValidator(fc: <a href="https://angular.io/api/forms/AbstractControl" target="_blank">AbstractControl</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="89"
+                            class="link-to-prism">src/app/shared/components/forms/forms.service.ts:89</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fc</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/forms/AbstractControl" target="_blank" >AbstractControl</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{ numberNotZeroValidator: boolean; }</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="numberValidator"></a>
+                    <span class="name">
+                        <b>
+                            numberValidator
+                        </b>
+                        <a href="#numberValidator"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>numberValidator(fc: <a href="https://angular.io/api/forms/AbstractControl" target="_blank">AbstractControl</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="78"
+                            class="link-to-prism">src/app/shared/components/forms/forms.service.ts:78</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fc</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/forms/AbstractControl" target="_blank" >AbstractControl</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{ numberValidator: boolean; }</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="requiredFileType"></a>
+                    <span class="name">
+                        <b>
+                            requiredFileType
+                        </b>
+                        <a href="#requiredFileType"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>requiredFileType(type: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="147"
+                            class="link-to-prism">src/app/shared/components/forms/forms.service.ts:147</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>type</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>(control: any) &#x3D;&gt; { requiredFileType: boolean; }</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showIndicator"></a>
+                    <span class="name">
+                        <b>
+                            showIndicator
+                        </b>
+                        <a href="#showIndicator"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>showIndicator(config)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="163"
+                            class="link-to-prism">src/app/shared/components/forms/forms.service.ts:163</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>config</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="stringToIsoUtcString"></a>
+                    <span class="name">
+                        <b>
+                            stringToIsoUtcString
+                        </b>
+                        <a href="#stringToIsoUtcString"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>stringToIsoUtcString(dateString: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="36"
+                            class="link-to-prism">src/app/shared/components/forms/forms.service.ts:36</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>dateString</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toFormData"></a>
+                    <span class="name">
+                        <b>
+                            toFormData
+                        </b>
+                        <a href="#toFormData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>toFormData(formValue: T)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="173"
+                            class="link-to-prism">src/app/shared/components/forms/forms.service.ts:173</a></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Type parameters :</b>
+                    <ul class="type-parameters">
+                        <li>T</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>formValue</td>
+                                    <td>
+                                            <code>T</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="trueOrFalseValidator"></a>
+                    <span class="name">
+                        <b>
+                            trueOrFalseValidator
+                        </b>
+                        <a href="#trueOrFalseValidator"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>trueOrFalseValidator(fc: <a href="https://angular.io/api/forms/AbstractControl" target="_blank">AbstractControl</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="73"
+                            class="link-to-prism">src/app/shared/components/forms/forms.service.ts:73</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fc</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/forms/AbstractControl" target="_blank" >AbstractControl</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{ required: boolean; }</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="uploadProgress"></a>
+                    <span class="name">
+                        <b>
+                            uploadProgress
+                        </b>
+                        <a href="#uploadProgress"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>uploadProgress(cb: (progress: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>) => void)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="183"
+                            class="link-to-prism">src/app/shared/components/forms/forms.service.ts:183</a></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Type parameters :</b>
+                    <ul class="type-parameters">
+                        <li>T</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>cb</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="valid"></a>
+                    <span class="name">
+                        <b>
+                            valid
+                        </b>
+                        <a href="#valid"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>valid(form: <a href="https://angular.io/api/forms/FormGroup" target="_blank">FormGroup</a>, fieldConfig: <a href="../interfaces/IFieldConfig.html">IFieldConfig</a>, formRef: <a href="https://angular.io/api/forms/NgForm" target="_blank">NgForm</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="18"
+                            class="link-to-prism">src/app/shared/components/forms/forms.service.ts:18</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>form</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>fieldConfig</td>
+                                    <td>
+                                                <code><a href="../interfaces/IFieldConfig.html" target="_self" >IFieldConfig</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>formRef</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/forms/NgForm" target="_blank" >NgForm</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validationExist"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            validationExist
+                        </b>
+                        <a href="#validationExist"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validationExist(func)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="191"
+                            class="link-to-prism">src/app/shared/components/forms/forms.service.ts:191</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>func</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="DOMAIN_REGEX"></a>
+                        <span class="name">
+                            <b>
+                            DOMAIN_REGEX</b>
+                            <a href="#DOMAIN_REGEX"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>/^([a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{2,}$/</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/shared/components/forms/forms.service.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="domainValidator"></a>
+                        <span class="name">
+                            <b>
+                            domainValidator</b>
+                            <a href="#domainValidator"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="120" class="link-to-prism">src/app/shared/components/forms/forms.service.ts:120</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="EMAIL_REGEX"></a>
+                        <span class="name">
+                            <b>
+                            EMAIL_REGEX</b>
+                            <a href="#EMAIL_REGEX"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>/(([^&lt;&gt;()\[\]\\.,;:\s@&quot;]+(\.[^&lt;&gt;()\[\]\\.,;:\s@&quot;]+)*)|(&quot;.+&quot;))@[*[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+]*/</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/shared/components/forms/forms.service.ts:12</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="emailValidator"></a>
+                        <span class="name">
+                            <b>
+                            emailValidator</b>
+                            <a href="#emailValidator"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="100" class="link-to-prism">src/app/shared/components/forms/forms.service.ts:100</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="MONEY_REGEX"></a>
+                        <span class="name">
+                            <b>
+                            MONEY_REGEX</b>
+                            <a href="#MONEY_REGEX"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>/^\d{1,18}(\.\d{1,2})?$/</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/shared/components/forms/forms.service.ts:11</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="moneyValidator"></a>
+                        <span class="name">
+                            <b>
+                            moneyValidator</b>
+                            <a href="#moneyValidator"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="138" class="link-to-prism">src/app/shared/components/forms/forms.service.ts:138</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="POSTCODE_REGEX"></a>
+                        <span class="name">
+                            <b>
+                            POSTCODE_REGEX</b>
+                            <a href="#POSTCODE_REGEX"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>/^(([A-PR-UWYZ0-9][A-HK-Y0-9][AEHMNPRTVXY0-9]?[ABEHMNPRVWXY0-9]? ?){1,2}[0-9][ABD-HJLN-UW-Z]{2}|GIR 0AA)$/i</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/shared/components/forms/forms.service.ts:10</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="postcodeValidator"></a>
+                        <span class="name">
+                            <b>
+                            postcodeValidator</b>
+                            <a href="#postcodeValidator"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="129" class="link-to-prism">src/app/shared/components/forms/forms.service.ts:129</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="telehponeValidator"></a>
+                        <span class="name">
+                            <b>
+                            telehponeValidator</b>
+                            <a href="#telehponeValidator"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="110" class="link-to-prism">src/app/shared/components/forms/forms.service.ts:110</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="TELEPHONE_REGEX"></a>
+                        <span class="name">
+                            <b>
+                            TELEPHONE_REGEX</b>
+                            <a href="#TELEPHONE_REGEX"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>/^([\(\)\-\.\\\\/+# 0-9x]|ext|extension)+$/</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/shared/components/forms/forms.service.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { HttpEvent, HttpEventType } from &#x27;@angular/common/http&#x27;;
+import { NgForm, FormGroup, AbstractControl, FormArray } from &#x27;@angular/forms&#x27;;
+import { tap } from &#x27;rxjs/operators&#x27;;
+
+import { IFieldConfig } from &#x27;../../models&#x27;;
+
+@Injectable()
+export class FormsService {
+  POSTCODE_REGEX &#x3D; /^(([A-PR-UWYZ0-9][A-HK-Y0-9][AEHMNPRTVXY0-9]?[ABEHMNPRVWXY0-9]? ?){1,2}[0-9][ABD-HJLN-UW-Z]{2}|GIR 0AA)$/i;
+  MONEY_REGEX &#x3D; /^\d{1,18}(\.\d{1,2})?$/;
+  EMAIL_REGEX &#x3D; /(([^&lt;&gt;()\[\]\\.,;:\s@&quot;]+(\.[^&lt;&gt;()\[\]\\.,;:\s@&quot;]+)*)|(&quot;.+&quot;))@[*[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+]*/;
+  TELEPHONE_REGEX &#x3D; /^([\(\)\-\.\\\\/+# 0-9x]|ext|extension)+$/;
+  DOMAIN_REGEX &#x3D; /^([a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{2,}$/;
+
+  constructor() {}
+
+  valid(form: FormGroup, fieldConfig: IFieldConfig, formRef: NgForm) {
+    if (form.controls[fieldConfig.name]) {
+      const valid &#x3D; form.controls[fieldConfig.name].valid &amp;&amp; (form.controls[fieldConfig.name].touched || formRef.submitted);
+      return valid;
+    }
+  }
+  invalid(form: FormGroup, fieldConfig: IFieldConfig, formRef: NgForm) {
+    return !form.controls[fieldConfig.name].valid &amp;&amp; (form.controls[fieldConfig.name].touched || formRef.submitted);
+  }
+
+  dateValidator(control: AbstractControl) {
+    if (control.value) {
+      const date &#x3D; new Date(control.value);
+      const valid &#x3D; date instanceof Date &amp;&amp; !isNaN(date.valueOf());
+      return valid ? undefined : { date: true };
+    }
+    return { date: true };
+  }
+  stringToIsoUtcString(dateString: string): string {
+    if (dateString) {
+      const isoString &#x3D; new Date(dateString).toISOString();
+      return isoString;
+    }
+    return &#x27;&#x27;;
+  }
+  multipleCheckboxRequireAtLeastOne(fa: FormArray) {
+    let valid &#x3D; false;
+
+    for (let x &#x3D; 0; x &lt; fa.length; ++x) {
+      if (fa.at(x).value) {
+        valid &#x3D; true;
+        break;
+      }
+    }
+    return valid
+      ? null
+      : {
+          multipleCheckboxRequireAtLeastOne: true,
+        };
+  }
+  multipleCheckboxRequireMoreThanOne(fa: FormArray) {
+    let checkedCount &#x3D; 0;
+
+    for (let x &#x3D; 0; x &lt; fa.length; ++x) {
+      if (fa.at(x).value) {
+        checkedCount++;
+      }
+    }
+    const valid &#x3D; checkedCount &gt; 1;
+    return valid
+      ? null
+      : {
+          multipleCheckboxRequireMoreThanOne: true,
+        };
+  }
+  trueOrFalseValidator(fc: AbstractControl) {
+    const valid &#x3D; fc.value &#x3D;&#x3D;&#x3D; true || fc.value &#x3D;&#x3D;&#x3D; false;
+
+    return valid ? null : { required: true };
+  }
+  numberValidator(fc: AbstractControl) {
+    const value &#x3D; +fc.value;
+    const valid &#x3D; typeof value &#x3D;&#x3D;&#x3D; &#x27;number&#x27; &amp;&amp; !isNaN(value);
+
+    return valid
+      ? null
+      : {
+          numberValidator: true,
+        };
+  }
+
+  numberNotZeroValidator(fc: AbstractControl) {
+    const value &#x3D; +fc.value;
+    const valid &#x3D; typeof value &#x3D;&#x3D;&#x3D; &#x27;number&#x27; &amp;&amp; !isNaN(value) &amp;&amp; value &gt; 0;
+
+    return valid
+      ? null
+      : {
+          numberNotZeroValidator: true,
+        };
+  }
+
+  emailValidator &#x3D; (fc: AbstractControl) &#x3D;&gt; {
+    const valid &#x3D; fc.value &amp;&amp; this.EMAIL_REGEX.test(fc.value);
+
+    return valid
+      ? null
+      : {
+          email: true,
+        };
+  };
+  // https://www.regexpal.com/?fam&#x3D;104738
+  telehponeValidator &#x3D; (fc: AbstractControl) &#x3D;&gt; {
+    const valid &#x3D; fc.value &amp;&amp; this.TELEPHONE_REGEX.test(fc.value);
+
+    return valid
+      ? null
+      : {
+          telephone: true,
+        };
+  };
+
+  domainValidator &#x3D; (fc: AbstractControl): any &#x3D;&gt; {
+    if (this.DOMAIN_REGEX.test(fc.value)) {
+      return null;
+    }
+    return {
+      invalidDomain: true,
+    };
+  };
+
+  postcodeValidator &#x3D; (control: AbstractControl): any &#x3D;&gt; {
+    const valid &#x3D; this.POSTCODE_REGEX.test(control.value);
+    return valid
+      ? null
+      : {
+          invalidPostcode: true,
+        };
+  };
+
+  moneyValidator &#x3D; (control: AbstractControl): any &#x3D;&gt; {
+    const valid &#x3D; this.MONEY_REGEX.test(control.value);
+    return valid
+      ? null
+      : {
+          invalidMoney: true,
+        };
+  };
+
+  requiredFileType(type: string) {
+    return function(control: AbstractControl) {
+      const file &#x3D; control.value;
+      if (file) {
+        const extension &#x3D; file.name.split(&#x27;.&#x27;)[1].toLowerCase();
+        if (type.toLowerCase() !&#x3D;&#x3D; extension.toLowerCase()) {
+          return {
+            requiredFileType: true,
+          };
+        }
+        return null;
+      }
+      return null;
+    };
+  }
+
+  showIndicator(config) {
+    return (
+      config.validation &amp;&amp;
+      config.validation.length &gt; 0 &amp;&amp;
+      config.validation.some(x &#x3D;&gt; {
+        return this.validationExist(x);
+      })
+    );
+  }
+
+  toFormData&lt;T&gt;(formValue: T) {
+    const formData &#x3D; new FormData();
+
+    for (const key of Object.keys(formValue)) {
+      const value &#x3D; formValue[key];
+      formData.append(key, value);
+    }
+    return formData;
+  }
+
+  uploadProgress&lt;T&gt;(cb: (progress: number) &#x3D;&gt; void) {
+    return tap((event: HttpEvent&lt;T&gt;) &#x3D;&gt; {
+      if (event.type &#x3D;&#x3D;&#x3D; HttpEventType.UploadProgress) {
+        cb(Math.round((100 * event.loaded) / event.total));
+      }
+    });
+  }
+
+  private validationExist(func) {
+    const funcStr &#x3D; func.toString().replace(/\s/g, &#x27;&#x27;);
+    const result &#x3D;
+      funcStr.indexOf(&#x27;{required:&#x27;) &gt; -1 ||
+      funcStr.indexOf(&quot;{&#x27;required&#x27;:&quot;) &gt; -1 ||
+      funcStr.indexOf(&#x27;multipleCheckboxesRequireOnlyOneChecked:&#x27;) &gt; -1 ||
+      funcStr.indexOf(&#x27;multipleCheckboxRequireAtLeastOne:&#x27;) &gt; -1 ||
+      funcStr.indexOf(&#x27;multipleCheckboxRequireMoreThanOne:&#x27;) &gt; -1;
+    return result;
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'FormsService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

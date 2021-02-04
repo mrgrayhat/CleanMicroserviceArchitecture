@@ -1,0 +1,279 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>aspnetnetcore documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">aspnetnetcore documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>HomeComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/home/home.component.ts</code>
+</p>
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>appc-home-component</code></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./home.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+
+@Component({
+  selector: &#x27;appc-home-component&#x27;,
+  templateUrl: &#x27;./home.component.html&#x27;
+})
+
+export class HomeComponent { }
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;jumbotron&quot;&gt;
+  &lt;h1 class&#x3D;&quot;display-4&quot;&gt;{{&#x27;app_title&#x27; | translate}}&lt;/h1&gt;
+  &lt;p class&#x3D;&quot;lead&quot;&gt;
+    {{&#x27;app_description&#x27; | translate}}
+  &lt;/p&gt;
+  &lt;p class&#x3D;&quot;lead&quot;&gt;
+    &lt;a class&#x3D;&quot;btn btn-primary btn-lg&quot; href&#x3D;&quot;{{&#x27;app_repo_url&#x27; | translate}}&quot; target&#x3D;&quot;_blank&quot; rel&#x3D;&quot;noopener&quot; role&#x3D;&quot;button&quot;&gt;More
+      info&lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;row justify-content-md-center&quot;&gt;
+  &lt;h2 class&#x3D;&quot;text-uppercase&quot;&gt;Features&lt;/h2&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+
+&lt;!-- Techs --&gt;
+&lt;div class&#x3D;&quot;row&quot;&gt;
+  &lt;div class&#x3D;&quot;col-sm-6&quot;&gt;
+    &lt;img class&#x3D;&quot;img-fluid float-left&quot; src&#x3D;&quot;/assets/images/aspnetcore.png&quot; alt&#x3D;&quot;Aspnetcore image&quot; width&#x3D;&quot;140&quot; height&#x3D;&quot;140&quot;&gt;
+    &lt;h2&gt;ASP.NET Core&lt;/h2&gt;
+    &lt;p&gt;ASP.NET is an open source web framework for building modern web apps and services with .NET. ASP.NET creates
+      websites based on HTML5, CSS, and JavaScript that are simple, fast, and can scale to millions of users.
+    &lt;/p&gt;
+    &lt;p class&#x3D;&quot;leat&quot;&gt;&lt;a class&#x3D;&quot;btn btn-secondary&quot; target&#x3D;&quot;_black&quot; rel&#x3D;&quot;noopener&quot; href&#x3D;&quot;https://www.asp.net/&quot; role&#x3D;&quot;button&quot;&gt;View details »&lt;/a&gt;&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-sm-6&quot;&gt;
+    &lt;img class&#x3D;&quot;img-fluid float-left&quot; src&#x3D;&quot;/assets/images/angular.png&quot; alt&#x3D;&quot;Angular image&quot; width&#x3D;&quot;140&quot; height&#x3D;&quot;140&quot;&gt;
+    &lt;h2&gt;Angular&lt;/h2&gt;
+    &lt;p&gt;Angular is a TypeScript-based open-source front-end web application platform led by the Angular Team at Google
+      and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built
+      AngularJS.
+    &lt;/p&gt;
+    &lt;p class&#x3D;&quot;leat&quot;&gt;&lt;a class&#x3D;&quot;btn btn-secondary&quot; target&#x3D;&quot;_black&quot; rel&#x3D;&quot;noopener&quot; href&#x3D;&quot;https://angular.io/&quot; role&#x3D;&quot;button&quot;&gt;View details »&lt;/a&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Description --&gt;
+&lt;!-- &lt;div class&#x3D;&quot;row&quot;&gt;
+  &lt;div class&#x3D;&quot;col-md-7&quot;&gt;
+    &lt;h2 class&#x3D;&quot;featurette-heading&quot;&gt;And lastly, this one. &lt;span class&#x3D;&quot;text-muted&quot;&gt;Checkmate.&lt;/span&gt;&lt;/h2&gt;
+    &lt;p class&#x3D;&quot;lead&quot;&gt;Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
+      semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-md-5&quot;&gt;
+    &lt;img class&#x3D;&quot;img-fluid mx-auto&quot; data-src&#x3D;&quot;holder.js/500x500/auto&quot; alt&#x3D;&quot;500x500&quot; src&#x3D;&quot;data:image/svg+xml;charset&#x3D;UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_165b5946ea5%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_165b5946ea5%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.125%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E&quot;
+      data-holder-rendered&#x3D;&quot;true&quot; style&#x3D;&quot;width: 500px; height: 500px;&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt; --&gt;</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="jumbotron">  <h1 class="display-4">{{\'app_title\' | translate}}</h1>  <p class="lead">    {{\'app_description\' | translate}}  </p>  <p class="lead">    <a class="btn btn-primary btn-lg" href="{{\'app_repo_url\' | translate}}" target="_blank" rel="noopener" role="button">More      info</a>  </p></div><div class="row justify-content-md-center">  <h2 class="text-uppercase">Features</h2></div><hr><!-- Techs --><div class="row">  <div class="col-sm-6">    <img class="img-fluid float-left" src="/assets/images/aspnetcore.png" alt="Aspnetcore image" width="140" height="140">    <h2>ASP.NET Core</h2>    <p>ASP.NET is an open source web framework for building modern web apps and services with .NET. ASP.NET creates      websites based on HTML5, CSS, and JavaScript that are simple, fast, and can scale to millions of users.    </p>    <p class="leat"><a class="btn btn-secondary" target="_black" rel="noopener" href="https://www.asp.net/" role="button">View details »</a></p>  </div>  <div class="col-sm-6">    <img class="img-fluid float-left" src="/assets/images/angular.png" alt="Angular image" width="140" height="140">    <h2>Angular</h2>    <p>Angular is a TypeScript-based open-source front-end web application platform led by the Angular Team at Google      and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built      AngularJS.    </p>    <p class="leat"><a class="btn btn-secondary" target="_black" rel="noopener" href="https://angular.io/" role="button">View details »</a></p>  </div></div><!-- Description --><!-- <div class="row">  <div class="col-md-7">    <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod      semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>  </div>  <div class="col-md-5">    <img class="img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_165b5946ea5%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_165b5946ea5%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.125%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"      data-holder-rendered="true" style="width: 500px; height: 500px;">  </div></div> --></div>'
+    var COMPONENTS = [{'name': 'AccordionComponent', 'selector': 'app-accordion'},{'name': 'ActionButtonComponent', 'selector': 'appc-action-button'},{'name': 'ActionButtonsComponent', 'selector': 'appc-action-buttons'},{'name': 'AppComponent', 'selector': 'appc-root'},{'name': 'AppFormComponent', 'selector': 'app-form'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'CardDeckComponent', 'selector': 'app-card-deck'},{'name': 'ChatComponent', 'selector': 'appc-chat'},{'name': 'CustomersComponent', 'selector': 'appc-customers'},{'name': 'DateFilterComponent', 'selector': 'app-date-filter'},{'name': 'DropdownFloatingFilterComponent', 'selector': 'appc-dropdown-filter'},{'name': 'ExamplesComponent', 'selector': 'appc-examples'},{'name': 'FooterComponent', 'selector': 'appc-footer'},{'name': 'FormButtonComponent', 'selector': 'app-form-button'},{'name': 'FormButtonGroupComponent', 'selector': 'app-form-button-group'},{'name': 'FormCheckboxComponent', 'selector': 'app-form-checkbox'},{'name': 'FormCheckboxListComponent', 'selector': 'app-form-checkbox-list'},{'name': 'FormDateComponent', 'selector': 'app-form-date'},{'name': 'FormFieldErrorComponent', 'selector': 'app-form-field-error, [appFormFieldError]'},{'name': 'FormFileComponent', 'selector': 'app-form-file'},{'name': 'FormFilePathComponent', 'selector': 'app-form-file-path'},{'name': 'FormInputComponent', 'selector': 'app-form-input'},{'name': 'FormInputGroupComponent', 'selector': 'app-form-input-group'},{'name': 'FormRadioListComponent', 'selector': 'app-form-radio-list'},{'name': 'FormSelectComponent', 'selector': 'app-form-select'},{'name': 'FormsPlaygroundComponent', 'selector': 'appc-forms-playground'},{'name': 'FormTextareaComponent', 'selector': 'app-form-textarea'},{'name': 'FormTimeComponent', 'selector': 'app-form-time'},{'name': 'GridComponent', 'selector': 'appc-grid'},{'name': 'HeaderComponent', 'selector': 'appc-header'},{'name': 'HomeComponent', 'selector': 'appc-home-component'},{'name': 'ImageResizerComponent', 'selector': 'app-image-resizer'},{'name': 'ListComponent', 'selector': 'app-list'},{'name': 'LoadingComponent', 'selector': 'appc-loading'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LoginMenuComponent', 'selector': 'app-login-menu'},{'name': 'LogoutComponent', 'selector': 'app-logout'},{'name': 'ModalComponent', 'selector': 'appc-modal-component'},{'name': 'MoveShapeComponent', 'selector': 'appc-move-shape'},{'name': 'PageHeadingComponent', 'selector': 'app-page-heading'},{'name': 'PrivacyComponent', 'selector': 'appc-privacy-component'},{'name': 'ProductsComponent', 'selector': 'appc-products'},{'name': 'SearchInputComponent', 'selector': 'appc-search-input'},{'name': 'ShopComponent', 'selector': 'appc-shop'},{'name': 'SignalrComponent', 'selector': 'appc-signalr'},{'name': 'ToastComponent', 'selector': 'app-toast'},{'name': 'ToggleSwitchComponent', 'selector': 'app-toggle-switch'},{'name': 'TypeaheadComponent', 'selector': 'app-typeahead'}];
+    var DIRECTIVES = [{'name': 'AppFileInputDirective', 'selector': '[appFileInput][type&#x3D;file]'},{'name': 'DraggableDirective', 'selector': '[draggable]'},{'name': 'FieldColorValidationDirective', 'selector': '[formControlName]:not(.checkbox-list-item),[ngModel]:not([ngbTypeahead]),[formControl]'},{'name': 'FormFieldDirective', 'selector': '[appFormField]'},{'name': 'ModalTemplateDirective', 'selector': 'ng-template[modal]'}];
+    var ACTUAL_COMPONENT = {'name': 'HomeComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'HomeComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
