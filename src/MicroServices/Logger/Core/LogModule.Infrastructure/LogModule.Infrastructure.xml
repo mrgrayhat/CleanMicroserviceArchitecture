@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LogModule.Infrastructure</name>
+    </assembly>
+    <members>
+        <member name="M:LogModule.Infrastructure.ServiceRegistration.AddLogModulePersistenceInfrastructure(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Configure Log Database. <inheritdoc cref="T:Microsoft.Extensions.Configuration.IConfiguration"/>
+            AddLogModule Service. <inheritdoc cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>
+            </summary>
+            <param name="services"></param>
+            <param name="configuration">configuration instannce</param>
+        </member>
+    </members>
+</doc>

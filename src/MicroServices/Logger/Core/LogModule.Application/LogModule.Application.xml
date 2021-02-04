@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LogModule.Application</name>
+    </assembly>
+    <members>
+        <member name="T:LogModule.Application.Behaviours.RequestPerformanceBehavior`2">
+            <summary>
+            measure request process performance and raise events if needed.
+            for example: log about a query/command if it took more than 5 seconds to complete.
+            </summary>
+            <typeparam name="TRequest"></typeparam>
+            <typeparam name="TResponse"></typeparam>
+        </member>
+        <member name="M:LogModule.Application.Controllers.LogController.Get(LogModule.Application.Features.Logs.Queries.GetAllLogs.GetAllLogsParameter)">
+            <summary>
+            Get paged list of log's, based on filters.
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LogModule.Application.Enums.LogLevels">
+            <summary>
+            Log Servity Filter, 0 = All (Default), 
+            Information = 1, Error = 2, Warning = 3, Verbose = 8
+            </summary>
+        </member>
+        <member name="F:LogModule.Application.Enums.LogLevels.ALL">
+            <summary>
+            All servity levels
+            </summary>
+        </member>
+        <member name="F:LogModule.Application.Enums.LogLevels.Information">
+            <summary>
+            usually info
+            </summary>
+        </member>
+        <member name="F:LogModule.Application.Enums.LogLevels.Error">
+            <summary>
+            failed action's that raised exceptions
+            </summary>
+        </member>
+        <member name="F:LogModule.Application.Enums.LogLevels.Warning">
+            <summary>
+            not very important but it's like an alert that need attention
+            </summary>
+        </member>
+        <member name="F:LogModule.Application.Enums.LogLevels.Debug">
+            <summary>
+            about framework actions
+            </summary>
+        </member>
+        <member name="F:LogModule.Application.Enums.LogLevels.Fatal">
+            <summary>
+            failure in system modules/services
+            </summary>
+        </member>
+        <member name="F:LogModule.Application.Enums.LogLevels.Critical">
+            <summary>
+            system failure or crash
+            </summary>
+        </member>
+        <member name="F:LogModule.Application.Enums.LogLevels.Trace">
+            <summary>
+            trace code blocks
+            </summary>
+        </member>
+        <member name="F:LogModule.Application.Enums.LogLevels.Verbose">
+            <summary>
+            everything about code's are running
+            </summary>
+        </member>
+        <member name="T:LogModule.Application.Features.Logs.Queries.GetAllLogs.GetAllLogsQuery">
+            <summary>
+            Get Logs Query.
+            </summary>
+        </member>
+        <member name="T:LogModule.Application.Features.Logs.Queries.GetAllLogs.GetAllLogsQueryHandler">
+            <summary>
+            Get Logs Query Handler. call service and do mappings to generate response.
+            </summary>
+        </member>
+        <member name="M:LogModule.Application.Features.Logs.Queries.GetAllLogs.GetAllLogsQueryHandler.Handle(LogModule.Application.Features.Logs.Queries.GetAllLogs.GetAllLogsQuery,System.Threading.CancellationToken)">
+            <summary>
+            get logs query handler
+            </summary>
+            <param name="request">request query</param>
+            <param name="cancellationToken">thread cancellation notif</param>
+            <returns>paging collection of logs</returns>
+        </member>
+        <member name="T:LogModule.Application.Features.Logs.Queries.GetAllLogs.GetAllLogsViewModel">
+            <summary>
+            Log ViewModel Response
+            </summary>
+        </member>
+    </members>
+</doc>
