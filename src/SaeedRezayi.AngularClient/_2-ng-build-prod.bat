@@ -1,1 +1,0 @@
-ng build --base-href /AngularClient/ --prod --watch
