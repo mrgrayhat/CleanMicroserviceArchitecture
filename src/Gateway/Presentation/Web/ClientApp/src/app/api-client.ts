@@ -426,8 +426,8 @@ export interface ICulturesDisplayViewModel {
 export class EnvironmentInformation implements IEnvironmentInformation {
     os?: string | undefined;
     machineName?: string | undefined;
-    environmentName?: string | undefined;
     frameworkVersion?: string | undefined;
+    environmentName?: string | undefined;
     commitHash?: string | undefined;
     branch?: string | undefined;
     tag?: string | undefined;
@@ -445,8 +445,8 @@ export class EnvironmentInformation implements IEnvironmentInformation {
         if (_data) {
             this.os = _data["os"];
             this.machineName = _data["machineName"];
-            this.environmentName = _data["environmentName"];
             this.frameworkVersion = _data["frameworkVersion"];
+            this.environmentName = _data["environmentName"];
             this.commitHash = _data["commitHash"];
             this.branch = _data["branch"];
             this.tag = _data["tag"];
@@ -464,8 +464,8 @@ export class EnvironmentInformation implements IEnvironmentInformation {
         data = typeof data === 'object' ? data : {};
         data["os"] = this.os;
         data["machineName"] = this.machineName;
-        data["environmentName"] = this.environmentName;
         data["frameworkVersion"] = this.frameworkVersion;
+        data["environmentName"] = this.environmentName;
         data["commitHash"] = this.commitHash;
         data["branch"] = this.branch;
         data["tag"] = this.tag;
@@ -476,8 +476,8 @@ export class EnvironmentInformation implements IEnvironmentInformation {
 export interface IEnvironmentInformation {
     os?: string | undefined;
     machineName?: string | undefined;
-    environmentName?: string | undefined;
     frameworkVersion?: string | undefined;
+    environmentName?: string | undefined;
     commitHash?: string | undefined;
     branch?: string | undefined;
     tag?: string | undefined;
