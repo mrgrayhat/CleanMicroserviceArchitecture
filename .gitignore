@@ -246,6 +246,10 @@ ModelManifest.xml
 /src/SaeedRezayi.AngularClient/package-lock.json
 /src/SaeedRezayi.WebApp/wwwroot/AngularClient
 /src/SaeedRezayi.WebApp/package-lock.json
+/src/Gateway/Presentation/Web/HealthChecks.db
+/src/MicroServices/Logger/Presentation/Logger.Microservice/Logs/
+/src/Gateway/Presentation/Web/ClientApp/dist/
+
 .vscode/solution-explorer/class.cs-template
 .vscode/solution-explorer/class.ts-template
 .vscode/solution-explorer/class.vb-template
@@ -255,4 +259,3 @@ ModelManifest.xml
 .vscode/solution-explorer/interface.ts-template
 .vscode/solution-explorer/template-list.json
 .vscode/solution-explorer/template-parameters.js
-/src/Gateway/Presentation/Web/ClientApp/dist/Gateway.Web.Api
