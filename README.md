@@ -4,7 +4,7 @@ Asp.net core Clean Microservice Architecture Using Api Gateway and Angular 10
 Microservices:
 - Api Gateway: Main Service For client and server microservices communications.
 Features:
-Load Balancing, Qos and circuit breaker, Rate Limiting and centeral auth.
+Load Balancing, Qos and circuit breaker, Rate Limiting and centeral auth. (using ocelot and polly)
 Microservices Health Checking And Health Check Ui.
 
 - Identity Server (STS):
