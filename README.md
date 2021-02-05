@@ -2,6 +2,12 @@ Asp.net core Clean Microservice Architecture Using Api Gateway and Angular 10
 ===========
 (Under Development)
 ------
+This project is written to show a clean architecture of microservices
+ and issues such as Multilingual and culture base content, service communication, centralized logging, central authentication، quality of service,
+ rate limiting and load balancing, health checking services, and Gateway Implementation using ocelot for client and services communication.
+also, CQRS Implementation using MediatR, Validation using Fluent validation, event subscribing and atomic transactions
+ api documentation and auto client code generating using swagger and nswag, OAuth and SSO using Identity Server.
+
 Microservices:
 ```
 - Api Gateway: Main Service For client and server microservices communications.
@@ -41,5 +47,6 @@ Upload and download files for microservices and clints.
 ```
 ```
 Client(Angular 10 UI):
-Angular SPA application.
+Angular SPA application proxy with backend gateway api.
+Implementation of Multilingual ui and modules.
 ```
