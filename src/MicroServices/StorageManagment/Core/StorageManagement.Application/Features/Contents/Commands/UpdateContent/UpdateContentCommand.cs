@@ -1,5 +1,4 @@
-﻿using System.Net.Mime;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
 using Microsoft.AspNetCore.Http;
@@ -14,7 +13,7 @@ namespace StorageManagement.Application.Features.Contents.Commands.UpdateContent
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public ContentType ContentType { get; set; }
+        public string ContentType { get; set; }
         public int Downloads { get; set; }
         public string Description { get; set; }
         public IFormFile File { get; set; }

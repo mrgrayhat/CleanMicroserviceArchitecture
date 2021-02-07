@@ -26,14 +26,18 @@ namespace StorageManagement.Api
         {
             #region Add Layers Extensions
             services.AddApplication()
-                .AddInfrastructures()
-                .AddSharedInfrastructures();
+                    .AddInfrastructures(Configuration/*, HostingEnvironment*/)
+                    .AddStoragePersistenceInfrastructure(Configuration, HostingEnvironment)
+                    .AddSharedInfrastructures();
             #endregion
 
-            services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "StorageManagement.Api", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "StorageManagement.Api",
+                    Version = "v1"
+                });
             });
 
         }

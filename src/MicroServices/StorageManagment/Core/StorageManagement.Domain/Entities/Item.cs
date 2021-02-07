@@ -1,6 +1,4 @@
-﻿using System;
-using System.Net.Mime;
-using StorageManagement.Domain.Common;
+﻿using StorageManagement.Domain.Common;
 
 namespace StorageManagement.Domain.Entities
 {
@@ -24,7 +22,7 @@ namespace StorageManagement.Domain.Entities
         /// <summary>
         /// Type of file/data
         /// </summary>
-        public ContentType ContentType { get; set; }
+        public string ContentType { get; set; }
         /// <summary>
         /// total download count
         /// </summary>
