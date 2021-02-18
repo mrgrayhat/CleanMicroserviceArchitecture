@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Gateway.Web.Api.Services;
 using Gateway.Web.Api.Services.Contracts;
 using Gateway.Web.Api.SignalR;
@@ -62,14 +63,24 @@ namespace Gateway.Web.Api
             //        options.SupportedUICultures = supportedCultures;
             //    });
             #endregion
-
             services.AddTransient<IApplicationService, ApplicationService>();
             services.AddSingleton<IDeploymentEnvironment, DeploymentEnvironment>();
 
             services.AddHttpContextAccessor()
                     .AddResponseCompression()
-                    .AddMemoryCache()
-                    .AddHealthChecks();
+                    .AddMemoryCache();
+            var healthChecks = services.AddHealthChecks();
+
+            healthChecks.AddCheck("self", () => HealthCheckResult.Healthy());
+            if (Configuration.GetValue<bool>("HealthChecks-UI:MicroservicesUptimeMonitor"))
+            {
+                healthChecks.AddUrlGroup(new Uri("http://localhost:5003/api/v1/storage"), "Storage service state", HealthStatus.Unhealthy, new[] { "Storage", "Uptime" });
+
+                healthChecks.AddUrlGroup(new Uri("http://localhost:5007/"), "Identity server service state", HealthStatus.Unhealthy, new[] { "STS", "Uptime" });
+                
+                healthChecks.AddUrlGroup(new Uri("http://localhost:4949/api/v1/storage"), "Logger service state", HealthStatus.Unhealthy, new[] { "Logger", "Uptime" });
+
+            }
 
             services.AddHealthChecksUI()
                 .AddSqliteStorage(Configuration["Data:HealthCheckDb"]);
@@ -138,8 +149,8 @@ namespace Gateway.Web.Api
             app.UseOpenApi();
             app.UseSwaggerUi3(settings =>
             {
-                settings.Path = "/api";
-                settings.DocumentPath = "/api/specification.json";
+                settings.Path = "/wwwroot/api";
+                settings.DocumentPath = "/wwwroot/api/specification.json";
             });
             app.UseHttpsRedirection();
 
