@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1CF454CA-F0A0-4F48-919E-B58CDF8F94F5}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		.gitignore = .gitignore
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2A0DF886-D8D5-4A99-9059-FB69E69C05EF}"
@@ -74,15 +75,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{F27F454E-B4F3-4889-B097-06AB6FE04CD8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageManagement.Api", "src\MicroServices\StorageManagment\Presentation\StorageManagment.Api\StorageManagement.Api.csproj", "{E41819B3-C55E-4CFC-901A-8B48CFE4F3F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageManagement.Api", "src\MicroServices\StorageManagement\Presentation\StorageManagement.Api\StorageManagement.Api.csproj", "{E41819B3-C55E-4CFC-901A-8B48CFE4F3F8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageManagement.Application", "src\MicroServices\StorageManagment\Core\StorageManagement.Application\StorageManagement.Application.csproj", "{69CAEDF8-A029-43D0-9FC0-877A086C7F35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageManagement.Application", "src\MicroServices\StorageManagement\Core\StorageManagement.Application\StorageManagement.Application.csproj", "{69CAEDF8-A029-43D0-9FC0-877A086C7F35}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageManagement.Domain", "src\MicroServices\StorageManagment\Core\StorageManagement.Domain\StorageManagement.Domain.csproj", "{122226E4-B85C-46A3-9485-103A2107220F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageManagement.Domain", "src\MicroServices\StorageManagement\Core\StorageManagement.Domain\StorageManagement.Domain.csproj", "{122226E4-B85C-46A3-9485-103A2107220F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageManagement.Infrastraucture", "src\MicroServices\StorageManagment\Core\StorageManagement.Infrastraucture\StorageManagement.Infrastraucture.csproj", "{C6E241F1-287D-4F58-94B7-A631F7706343}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageManagement.Infrastraucture", "src\MicroServices\StorageManagement\Core\StorageManagement.Infrastraucture\StorageManagement.Infrastraucture.csproj", "{C6E241F1-287D-4F58-94B7-A631F7706343}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageManagement.Infrastructure.Shared", "src\MicroServices\StorageManagment\Core\StorageManagement.Infrastructure.Shared\StorageManagement.Infrastructure.Shared.csproj", "{CC204E04-1E0D-49DA-AC46-5B1BEA05881B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageManagement.Infrastructure.Shared", "src\MicroServices\StorageManagement\Core\StorageManagement.Infrastructure.Shared\StorageManagement.Infrastructure.Shared.csproj", "{CC204E04-1E0D-49DA-AC46-5B1BEA05881B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
