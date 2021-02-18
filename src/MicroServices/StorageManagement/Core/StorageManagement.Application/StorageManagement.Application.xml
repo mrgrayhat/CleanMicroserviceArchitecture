@@ -1,0 +1,212 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StorageManagement.Application</name>
+    </assembly>
+    <members>
+        <member name="T:StorageManagement.Application.Behaviours.RequestPerformanceBehavior`2">
+            <summary>
+            measure request process performance and raise events if needed.
+            for example: log about a query/command if it took more than 5 seconds to complete.
+            </summary>
+            <typeparam name="TRequest"></typeparam>
+            <typeparam name="TResponse"></typeparam>
+        </member>
+        <member name="T:StorageManagement.Application.DTOs.ItemDto">
+            <summary>
+            An Storage Item that stored in FileSystem and indexed in database.
+            </summary>
+        </member>
+        <member name="P:StorageManagement.Application.DTOs.ItemDto.Url">
+            <summary>
+            file path
+            </summary>
+        </member>
+        <member name="P:StorageManagement.Application.DTOs.ItemDto.Id">
+            <summary>
+            Unique Identify Key
+            </summary>
+        </member>
+        <member name="P:StorageManagement.Application.DTOs.ItemDto.Name">
+            <summary>
+            an title/name. can be empty
+            </summary>
+        </member>
+        <member name="P:StorageManagement.Application.DTOs.ItemDto.CreatedBy">
+            <summary>
+            creator identity
+            </summary>
+        </member>
+        <member name="P:StorageManagement.Application.DTOs.ItemDto.LastModifiedBy">
+            <summary>
+            editor identity
+            </summary>
+        </member>
+        <member name="P:StorageManagement.Application.DTOs.ItemDto.Created">
+            <summary>
+            first creation time
+            </summary>
+        </member>
+        <member name="P:StorageManagement.Application.DTOs.ItemDto.LastModified">
+            <summary>
+            last update time
+            </summary>
+        </member>
+        <member name="P:StorageManagement.Application.DTOs.ItemDto.Description">
+            <summary>
+            a short text to describe content
+            </summary>
+        </member>
+        <member name="P:StorageManagement.Application.DTOs.ItemDto.Tags">
+            <summary>
+            total bytes of data
+            </summary>
+        </member>
+        <member name="P:StorageManagement.Application.DTOs.ItemDto.ContentType">
+            <summary>
+            Type of file/data
+            </summary>
+        </member>
+        <member name="P:StorageManagement.Application.DTOs.ItemDto.Downloaded">
+            <summary>
+            total download count
+            </summary>
+        </member>
+        <member name="P:StorageManagement.Application.DTOs.ItemDto.VerifiedHash">
+            <summary>
+            Unique Hash to protect against invalid/untracked changes
+            </summary>
+        </member>
+        <member name="M:StorageManagement.Application.Events.ContentRequestedEvent.#ctor(System.DateTime,System.Int32,System.String)">
+            <summary>
+            event
+            </summary>
+            <param name="requestDate"></param>
+            <param name="contentId">unique id/key</param>
+            <param name="client">reciever</param>
+        </member>
+        <member name="M:StorageManagement.Application.Extensions.FileExtensions.GetFileExtension(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            extract file extension from <see cref="T:Microsoft.AspNetCore.Http.IFormFile"/> input.
+            </summary>
+            <param name="file">the full name/path of the file</param>
+            <returns>image.png => png</returns>
+        </member>
+        <member name="M:StorageManagement.Application.Extensions.FileExtensions.GetFileExtension(System.String)">
+            <summary>
+            extract file extension via it's full name, for example: image.png => png
+            </summary>
+            <param name="fileName">the full name/path of the file</param>
+            <returns>image.png => png</returns>
+        </member>
+        <member name="P:StorageManagement.Application.Features.Contents.Commands.CreateContent.CreateContentCommand.Name">
+            <summary>
+            a name
+            </summary>
+        </member>
+        <member name="P:StorageManagement.Application.Features.Contents.Commands.CreateContent.CreateContentCommand.Size">
+            <summary>
+            total bytes of data
+            </summary>
+        </member>
+        <member name="P:StorageManagement.Application.Features.Contents.Commands.CreateContent.CreateContentCommand.VerifiedHash">
+            <summary>
+            Unique Hash to protect against invalid/untracked changes
+            </summary>
+        </member>
+        <member name="M:StorageManagement.Application.Features.Contents.Commands.CreateContent.CreateContentCommandValidator.IsValidType(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            validate/filter file extenstion and type, based on <see cref="T:Microsoft.Extensions.Configuration.IConfiguration"/> configured setting, in AllowedFileTypes Section
+            </summary>
+            <param name="file"><see cref="T:Microsoft.AspNetCore.Http.IFormFile"/> to validate</param>
+            <returns>true if valid, otherwise false</returns>
+        </member>
+        <member name="M:StorageManagement.Application.Features.Contents.Commands.UpdateContent.UpdateContentCommandValidator.IsValidType(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            validate/filter file extenstion and type, based on <see cref="T:Microsoft.Extensions.Configuration.IConfiguration"/> configured setting, in AllowedFileTypes Section
+            </summary>
+            <param name="file"><see cref="T:Microsoft.AspNetCore.Http.IFormFile"/> to validate</param>
+            <returns>true if valid, otherwise false</returns>
+        </member>
+        <member name="T:StorageManagement.Application.Features.Contents.Queries.GetAllContents.GetAllContentsQuery">
+            <summary>
+            Get Storage Content Query with filters
+            </summary>
+        </member>
+        <member name="P:StorageManagement.Application.Features.Contents.Queries.GetContenById.GetContentByIdQuery.Id">
+            <summary>
+            content id
+            </summary>
+        </member>
+        <member name="T:StorageManagement.Application.Features.Contents.Queries.SearchContents.SearchContentsQuery">
+            <summary>
+            search contents Query/Filter.
+            </summary>
+        </member>
+        <member name="T:StorageManagement.Application.Features.Contents.Queries.SearchContents.SearchContentsQueryHandler">
+            <summary>
+            search Contents Query Handler. call service and do mappings to generate response.
+            </summary>
+        </member>
+        <member name="M:StorageManagement.Application.Features.Contents.Queries.SearchContents.SearchContentsQueryHandler.Handle(StorageManagement.Application.Features.Contents.Queries.SearchContents.SearchContentsQuery,System.Threading.CancellationToken)">
+            <summary>
+            search Contents query handler
+            </summary>
+            <param name="request">request query</param>
+            <param name="cancellationToken">thread cancellation notif</param>
+            <returns>paging collection of search result</returns>
+        </member>
+        <member name="T:StorageManagement.Application.Services.StorageFileSystemProvider">
+            <summary>
+            This service is for manage physical files (<see cref="T:System.IO.File"/>) in the FileSystem.
+            Store (Save into the specified storage path with unique name),Retrive(open for read or download or etc),Delete files and Search for them, are main functions.
+            </summary>
+        </member>
+        <member name="M:StorageManagement.Application.Services.StorageFileSystemProvider.StoreAsync(Microsoft.AspNetCore.Http.IFormFile,System.Threading.CancellationToken)">
+            <summary>
+            save the input file to the storage, based on configured appsetting
+            </summary>
+            <param name="file"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StorageManagement.Application.Services.StorageFileSystemProvider.RetriveAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            open file stream to read
+            </summary>
+            <param name="filePath"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StorageManagement.Application.Services.StorageFileSystemProvider.ArchiveAsync(System.String)">
+            <summary>
+            move the file to the Specified archive path(in the settings)
+            </summary>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StorageManagement.Application.Services.StorageFileSystemProvider.LockFile(System.String,System.Nullable{System.TimeSpan})">
+            <summary>
+            lock file for others access, until specified durration (default:30s)
+            </summary>
+            <param name="filePath">path of the file</param>
+            <param name="durration">lock durration</param>
+            <returns></returns>
+        </member>
+        <member name="P:StorageManagement.Application.Wrappers.PagedResponse`1.PageNumber">
+            <summary>
+            number of page
+            </summary>
+        </member>
+        <member name="P:StorageManagement.Application.Wrappers.PagedResponse`1.PageSize">
+            <summary>
+            max item per page
+            </summary>
+        </member>
+        <member name="P:StorageManagement.Application.Wrappers.PagedResponse`1.Total">
+            <summary>
+            total items number
+            </summary>
+        </member>
+    </members>
+</doc>
