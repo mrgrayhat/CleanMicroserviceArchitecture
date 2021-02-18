@@ -101,7 +101,7 @@
         </member>
         <member name="P:StorageManagement.Application.Features.Contents.Commands.CreateContent.CreateContentCommand.Name">
             <summary>
-            a name
+            a nickname name
             </summary>
         </member>
         <member name="P:StorageManagement.Application.Features.Contents.Commands.CreateContent.CreateContentCommand.Size">
@@ -120,6 +120,21 @@
             </summary>
             <param name="file"><see cref="T:Microsoft.AspNetCore.Http.IFormFile"/> to validate</param>
             <returns>true if valid, otherwise false</returns>
+        </member>
+        <member name="P:StorageManagement.Application.Features.Contents.Commands.UpdateContent.UpdateContentCommand.Name">
+            <summary>
+            a nickname name
+            </summary>
+        </member>
+        <member name="P:StorageManagement.Application.Features.Contents.Commands.UpdateContent.UpdateContentCommand.Size">
+            <summary>
+            total bytes of data
+            </summary>
+        </member>
+        <member name="P:StorageManagement.Application.Features.Contents.Commands.UpdateContent.UpdateContentCommand.VerifiedHash">
+            <summary>
+            Unique Hash to protect against invalid/untracked changes
+            </summary>
         </member>
         <member name="M:StorageManagement.Application.Features.Contents.Commands.UpdateContent.UpdateContentCommandValidator.IsValidType(Microsoft.AspNetCore.Http.IFormFile)">
             <summary>
@@ -162,12 +177,13 @@
             Store (Save into the specified storage path with unique name),Retrive(open for read or download or etc),Delete files and Search for them, are main functions.
             </summary>
         </member>
-        <member name="M:StorageManagement.Application.Services.StorageFileSystemProvider.StoreAsync(Microsoft.AspNetCore.Http.IFormFile,System.Threading.CancellationToken)">
+        <member name="M:StorageManagement.Application.Services.StorageFileSystemProvider.StoreAsync(Microsoft.AspNetCore.Http.IFormFile,System.Threading.CancellationToken,System.Boolean)">
             <summary>
             save the input file to the storage, based on configured appsetting
             </summary>
             <param name="file"></param>
             <param name="cancellationToken"></param>
+            <param name="overwrite">overwrite file if exist</param>
             <returns></returns>
         </member>
         <member name="M:StorageManagement.Application.Services.StorageFileSystemProvider.RetriveAsync(System.String,System.Threading.CancellationToken)">
