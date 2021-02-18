@@ -15,6 +15,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 
 namespace Blog.Api
 {
@@ -75,7 +76,14 @@ namespace Blog.Api
             }
             #endregion
 
-
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "Blog.Api",
+                    Version = "v1"
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -91,13 +99,13 @@ namespace Blog.Api
 
             app.UseHttpsRedirection();
 
-
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Blog.Api v1"));
+            app.UseOpenApi();
             app.UseSwaggerUi3(settings =>
             {
-                settings.Path = "/api";
-                settings.DocumentPath = "/api/specification.json";
+                settings.Path = "/wwwroot/api";
+                settings.DocumentPath = "/wwwroot/api/specification.json";
             });
-
             app.UseRouting();
 
             app.UseAuthentication();
