@@ -1,0 +1,1 @@
+dotnet ef migrations add Init_Storage --context StorageDbContext --startup-project ../../Presentation/StorageManagment.Api/StorageManagement.Api.csproj

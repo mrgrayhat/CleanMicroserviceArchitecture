@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StorageManagement.Infrastraucture</name>
+    </assembly>
+    <members>
+        <member name="M:StorageManagement.Infrastructure.Repositories.StorageRepositoryAsync.GetByIdAsync(System.Int32)">
+            <summary>
+             get by id using FirstOrDefault
+            </summary>
+        </member>
+    </members>
+</doc>
