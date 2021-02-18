@@ -30,16 +30,16 @@ namespace StorageManagement.Application.Services
         /// </summary>
         /// <param name="file"></param>
         /// <param name="cancellationToken"></param>
+        /// <param name="overwrite">overwrite file if exist</param>
         /// <returns></returns>
-        public async Task<string> StoreAsync(IFormFile file, CancellationToken cancellationToken)
+        public async Task<string> StoreAsync(IFormFile file, CancellationToken cancellationToken = default, bool overwrite = false)
         {
             string fileName = Guid.NewGuid().ToString("N"); // Give file name
             string extension = Path.GetExtension(file.FileName);
-
             string filePath = Path.Combine(_configuration["Storage:StoragePath"],
                 string.Concat(fileName, extension));
 
-            using var fs = new FileStream(filePath, FileMode.Create, FileAccess.Write);
+            using var fs = new FileStream(filePath, overwrite is true ? FileMode.Create : FileMode.CreateNew, FileAccess.Write);
             await file.CopyToAsync(fs, cancellationToken).ConfigureAwait(false);
 
             return filePath;
@@ -50,13 +50,13 @@ namespace StorageManagement.Application.Services
         /// <param name="filePath"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public async Task<Stream> RetriveAsync(string filePath, CancellationToken cancellationToken)
+        public async Task<Stream> RetriveAsync(string filePath, CancellationToken cancellationToken = default)
         {
             FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read);
 
             return await Task.FromResult(fs);
         }
-        public Response<int> DeleteAsync(string filePath, CancellationToken cancellationToken)
+        public Response<int> DeleteAsync(string filePath, CancellationToken cancellationToken = default)
         {
             Response<int> response = new Response<int>();
 
