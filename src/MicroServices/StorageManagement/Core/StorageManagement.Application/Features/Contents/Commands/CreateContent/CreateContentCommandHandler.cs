@@ -30,7 +30,7 @@ namespace StorageManagement.Application.Features.Contents.Commands.CreateContent
         {
             _httpContext = httpContext ?? throw new ArgumentNullException($"{nameof(httpContext)} is null");
             _logger = logger ?? throw new ArgumentNullException($"{nameof(logger)} is null");
-            _storageFileSystemProvider = storageFileSystemProvider ?? throw new ArgumentNullException($"{nameof(storageFileSystemProvider)} is null"); ;
+            _storageFileSystemProvider = storageFileSystemProvider ?? throw new ArgumentNullException($"{nameof(storageFileSystemProvider)} is null");
             _storageRepository = storageRepository ?? throw new ArgumentNullException($"{nameof(storageRepository)} is null"); ;
             _mapper = mapper ?? throw new ArgumentNullException($"{nameof(mapper)} is null"); ;
             _mediator = mediator ?? throw new ArgumentNullException($"{nameof(mediator)} is null");

@@ -13,7 +13,7 @@ namespace StorageManagement.Application.Features.Contents.Commands.CreateContent
         [Required(AllowEmptyStrings = false, ErrorMessage = "at least 1 file is required")]
         public IFormFile File { get; set; }
         /// <summary>
-        /// a name
+        /// a nickname name
         /// </summary>
         [Required(AllowEmptyStrings = false, ErrorMessage = "Title is required")]
         [MaxLength(50, ErrorMessage = "No More than 50 character are allowed")]
