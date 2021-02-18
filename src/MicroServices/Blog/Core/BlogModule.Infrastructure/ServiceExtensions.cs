@@ -82,6 +82,7 @@ namespace BlogModule.Infrastructure
                         b.MigrationsAssembly(typeof(BlogDbContext).Assembly.FullName);
                         //b.UseNetTopologySuite();
                     });
+                    options.ConfigureWarnings(x => x.Ignore(Microsoft.EntityFrameworkCore.Diagnostics.RelationalEventId.AmbientTransactionWarning));
                 }
                 else
                 {
@@ -175,18 +176,10 @@ namespace BlogModule.Infrastructure
                 options.SuppressModelStateInvalidFilter = true;
             });
 
-            //var controllerWithViews = services.AddControllersWithViews();
             services.AddControllers()
-
-            //var razorPages = services.AddRazorPages()
             .AddViewLocalization()
             .AddDataAnnotationsLocalization();
 
-            //if (environment.IsDevelopment())
-            //{
-            //    controllerWithViews.AddRazorRuntimeCompilation();
-            //    razorPages.AddRazorRuntimeCompilation();
-            //}
 
             return services;
         }
