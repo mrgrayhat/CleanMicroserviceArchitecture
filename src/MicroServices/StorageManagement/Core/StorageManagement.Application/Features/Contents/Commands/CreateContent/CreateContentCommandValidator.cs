@@ -38,6 +38,10 @@ namespace StorageManagement.Application.Features.Contents.Commands.CreateContent
             .MaximumLength(50)
             .WithMessage("No More than 50 character are allowed in {PropertyName}");
 
+            RuleFor(file => file.Tags)
+            .MaximumLength(70)
+            .WithMessage("No More than 70 character are allowed in {PropertyName}");
+
             RuleFor(file => file.Description)
             .MaximumLength(500)
             .WithMessage("No More than 50 character are allowed in {PropertyName}");
