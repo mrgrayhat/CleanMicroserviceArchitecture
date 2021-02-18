@@ -23,7 +23,6 @@ namespace BlogModule.Web.Api.Controllers.v1
         public BlogController(ILogger<BlogController> logger)
         {
             _logger = logger ?? throw new System.ArgumentNullException(nameof(logger));
-            //_mediator = mediator ?? throw new System.ArgumentNullException(nameof(mediator));
         }
 
         // GET: api/v1/<controller>
