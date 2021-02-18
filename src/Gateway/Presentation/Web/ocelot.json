@@ -1,8 +1,58 @@
 {
   "Routes": [
-    // get blog posts with paging parameters
+    // communicate with logger service to store/manange log & messages of all service's through gateway
     {
-      "DownstreamPathTemplate": "/api/v1/Blog?PageNumber={PageNumber}&PageSize={PageSize}",
+      "DownstreamPathTemplate": "/api/v{version}/Logger",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 4949
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v{version}/Logger",
+      "UpstreamHttpMethod": ["Get", "POST", "PUT", "DELETE" ]
+    },
+    // storage management service
+    {
+      "DownstreamPathTemplate": "/api/v1/Storage?PageNumber={PageNumber}&PageSize={PageSize}&SortOrder={SortOrder}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/Storage?PageNumber={PageNumber}&PageSize={PageSize}&SortOrder={SortOrder}",
+      "UpstreamHttpMethod": ["GET"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Storage/Upload",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/Storage/Upload",
+      "UpstreamHttpMethod": [ "POST"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Storage/{Id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/Storage/{Id}",
+      "UpstreamHttpMethod": [ "Get","PUT" ,"DELETE"]
+    },
+    // get blog posts with paging and filters
+    {
+      "DownstreamPathTemplate": "/api/v1/Blog?PageNumber={PageNumber}&PageSize={PageSize}&SortOrder={SortOrder}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -10,10 +60,10 @@
           "Port": 5004
         }
       ],
-      "UpstreamPathTemplate": "/api/v1/Blog?PageNumber={PageNumber}&PageSize={PageSize}",
+      "UpstreamPathTemplate": "/api/v1/Blog?PageNumber={PageNumber}&PageSize={PageSize}&SortOrder={SortOrder}",
       "UpstreamHttpMethod": [ "GET" ]
     },
-    // get blog post
+    // get blog post detail
     {
       "DownstreamPathTemplate": "/api/v1/blog/{id}",
       "DownstreamScheme": "https",
@@ -26,7 +76,7 @@
       "UpstreamPathTemplate": "/api/v1/blog/{id}",
       "UpstreamHttpMethod": [ "GET", "OPTIONS" ]
     },
-    // edit blog post
+    // edit blog post via it's id
     {
       "DownstreamPathTemplate": "/api/v1/blog/{id}",
       "DownstreamScheme": "https",
@@ -39,7 +89,7 @@
       "UpstreamPathTemplate": "/api/v1/blog/{id}",
       "UpstreamHttpMethod": [ "POST", "PUT", "DELETE" ]
     },
-    // get all blog posts
+    // get all blog posts as paged response
     {
       "DownstreamPathTemplate": "/api/v1/blog",
       "DownstreamScheme": "https",
