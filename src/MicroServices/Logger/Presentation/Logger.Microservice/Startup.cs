@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 using Newtonsoft.Json.Serialization;
 
 namespace Logger.API
@@ -29,7 +30,7 @@ namespace Logger.API
             services.AddMvc();
 
             services.AddLogModuleApplicationLayer()
-                .AddLogModulePersistenceInfrastructure(Configuration);
+                .AddLoggerInfrastructures(Configuration);
 
             services.AddHttpContextAccessor()
                 .AddResponseCompression()
@@ -58,6 +59,16 @@ namespace Logger.API
                                 minFreeSize),
                                 "Storage Disk", failureStatus: HealthStatus.Degraded);
             #endregion
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "Logger.Api",
+                    Version = "v1"
+                });
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -68,7 +79,13 @@ namespace Logger.API
                 app.UseDeveloperExceptionPage();
             }
             app.UseRequestLogging();
-
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Logger.Api v1"));
+            app.UseOpenApi();
+            app.UseSwaggerUi3(settings =>
+            {
+                settings.Path = "/wwwroot/api";
+                settings.DocumentPath = "/wwwroot/api/specification.json";
+            });
             app.UseRouting();
 
             app.UseAuthorization();
