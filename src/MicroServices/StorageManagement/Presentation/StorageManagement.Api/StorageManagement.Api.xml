@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StorageManagement.Api</name>
+    </assembly>
+    <members>
+        <member name="T:StorageManagement.Api.Controllers.BaseApiController">
+            <summary>
+            dynamic routing per version
+            </summary>
+        </member>
+        <member name="T:StorageManagement.Api.Controllers.BaseApiControllerNoVersioning">
+            <summary>
+            for controller who don't need versioning
+            </summary>
+        </member>
+    </members>
+</doc>
